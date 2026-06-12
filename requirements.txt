@@ -1,0 +1,38 @@
+# ─── Data & Parsing ────────────────────────────────────────────
+pymupdf==1.25.5
+beautifulsoup4==4.13.4
+requests==2.32.3
+lxml==5.4.0
+tqdm==4.67.1
+
+# ─── NLP & ML ──────────────────────────────────────────────────
+scikit-learn==1.6.1           # TF-IDF baseline (Ch.3)
+rank-bm25==0.2.2              # BM25 index
+sentence-transformers==4.1.0  # BGE embeddings + CrossEncoder
+faiss-cpu==1.11.0             # HNSW vector index
+nltk==3.9.1                   # Tokenization, POS tagging (Ch.2)
+
+# ─── LLM Clients ───────────────────────────────────────────────
+groq==0.25.0                  # Groq API (cloud LLM - fast & free tier)
+ollama==0.5.1                 # Local LLM (optional, for offline eval)
+google-genai                  # For ground truth generation (Gemini)
+
+# ─── API & UI ──────────────────────────────────────────────────
+fastapi==0.115.12
+uvicorn==0.34.2
+streamlit==1.45.1
+pydantic==2.11.3
+python-multipart==0.0.20
+
+# ─── Evaluation ────────────────────────────────────────────────
+ragas==0.2.15
+matplotlib==3.10.3
+pandas==2.2.3
+numpy==2.2.6
+
+# ─── Dev & Utils ───────────────────────────────────────────────
+pytest==8.4.0
+pytest-cov==6.1.0
+python-dotenv==1.1.0
+loguru==0.7.3
+pyyaml==6.0.2
