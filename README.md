@@ -1,178 +1,163 @@
 # SEC 10-K RAG QA Chatbot System
 
-Hệ thống Hỏi đáp (Question-Answering Chatbot) ứng dụng mô hình RAG (Retrieval-Augmented Generation) tìm kiếm và phân tích báo cáo tài chính SEC 10-K của 6 tập đoàn công nghệ lớn (AAPL, MSFT, AMZN, NVDA, TSLA, GOOGL) giai đoạn 2022 - 2024.
-
-Dự án được xây dựng với mục tiêu kép:
-
-1. **Production System:** Chạy ứng dụng thực tế với FastAPI Backend và Streamlit Frontend, hỗ trợ đối chiếu 3 pipeline tìm kiếm (Baseline 1, Baseline 2, Enhanced Pipeline).
-2. **Academic Notebooks:** Bộ bài thực hành chi tiết giúp kiểm chứng công thức toán học và giải thích chi tiết các thuật toán phục vụ vấn đáp môn học NLP/IR.
+**Languages / Ngôn ngữ:** [English (US)](README.md) | [Tiếng Việt (VIE)](README_VIE.md)
 
 ---
 
-## 📁 Cấu Trúc Thư Mục Dự Án
+A high-performance Question-Answering Chatbot system built using Retrieval-Augmented Generation (RAG) to search and analyze SEC 10-K annual financial reports of 6 major technology corporations (AAPL, MSFT, AMZN, NVDA, TSLA, GOOGL) from fiscal years 2022 to 2024.
+
+This repository serves a dual purpose:
+
+1. **Production System:** An end-to-end working system with a FastAPI backend and a Streamlit frontend supporting live debugging and 3 query pipeline routing modes.
+2. **Academic Notebooks:** A complete suite of interactive Jupyter Notebooks containing mathematical step-by-step calculations, matrix outputs, and 2D graph visualizations for NLP/IR course presentation.
+
+---
+
+## 📁 Project Directory Structure
 
 ```text
 NLP-project/
-├── data/                     # Thư mục chứa dữ liệu
-│   ├── raw/                  # Báo cáo 10-K gốc dạng HTML từ SEC EDGAR
-│   ├── processed/            # File documents.jsonl chứa các chunk đã parse
-│   └── indexes/              # Chỉ mục nhị phân lưu trữ (FAISS .faiss + BM25 .pkl)
-├── src/                      # Source code hệ thống RAG Production
-│   ├── ingestion/            # Bộ nạp dữ liệu (downloader, parser, chunker)
-│   ├── indexing/             # Bộ lập chỉ mục (BM25Index, VectorIndex HNSW)
-│   ├── retrieval/            # Thuật toán tìm kiếm (Hybrid Search, CE Reranker)
-│   ├── generation/           # Prompt Engineering & LLM clients (Groq/Ollama)
-│   └── api/                  # FastAPI backend server
-├── app/                      # Giao diện ứng dụng
-│   └── streamlit_app.py      # Streamlit Frontend UI
-├── notebooks/                # Bộ tài liệu Jupyter Notebook minh họa toán học
-│   ├── preprocessing/        # Demo parsing và chunking thô
-│   ├── baselines/            # Chạy thử nghiệm chi tiết các mức độ Baseline
-│   │   ├── 1_lexical/        # Demo toán học TF-IDF và Okapi BM25
-│   │   ├── 2_vector/         # Demo Dense Embeddings & trực quan đồ thị HNSW 2D
-│   │   └── 3_enhanced/       # Mô phỏng luồng dữ liệu step-by-step hệ thống nâng cao
-│   └── eval/                 # Trực quan hóa kết quả thực nghiệm Ablation Study
-├── eval/                     # Kết quả đánh giá thực nghiệm (Ablation Study)
-│   ├── results/              # File lưu kết quả JSON cho 5 cấu hình
-│   ├── figures/              # Biểu đồ so sánh chất lượng và độ trễ
-│   └── scripts/              # Mã nguồn chương trình chạy đánh giá
-├── requirements.txt          # Các thư viện phụ thuộc
-└── README.md                 # Hướng dẫn dự án này
+├── data/                     # Data directory
+│   ├── raw/                  # Raw SEC EDGAR HTML reports
+│   ├── processed/            # parsed documents.jsonl containing clean chunks
+│   ├── indexes/              # Saved index files (FAISS .faiss + BM25 .pkl)
+│   └── eval/                 # 80 benchmark queries and raw JSON results
+├── src/                      # Production RAG backend source code
+│   ├── ingestion/            # Data ingestion (downloader, parser, chunker)
+│   ├── indexing/             # Search index builders (BM25, Dense HNSW)
+│   ├── retrieval/            # Retrieval logic (Hybrid Search, Reranking)
+│   ├── generation/           # Prompt templates & LLM API clients
+│   └── api/                  # FastAPI web server
+├── app/                      # Frontend UI application
+│   └── streamlit_app.py      # Streamlit chat interface
+├── eval/                     # Evaluation results and reports
+│   ├── figures/              # Generated ablation charts & plots
+│   ├── scripts/              # Evaluation script runner
+│   └── ablation_report.md    # Academic evaluation report
+├── notebooks/                # Academic Jupyter Notebooks
+│   ├── preprocessing/        # Raw parsing and chunking demos
+│   ├── baselines/            # Baseline search runs & HNSW graph plots
+│   └── 4_ablation_study_evaluation.ipynb # Presentation notebook
+├── requirements.txt          # Project dependencies
+├── walkthrough.md            # Interactive walkthrough & Q&A guide
+└── plan.md                   # Updated project plan
 ```
 
 ---
 
-## 🛠️ Chi Tiết Mã Nguồn Sản Phẩm (`src/`)
+## 🛠️ Production Source Code Architecture (`src/`)
 
-Hệ thống backend được chia thành các lớp chức năng độc lập theo mô hình RAG tiêu chuẩn:
+The backend is modularized into independent RAG pipeline components:
 
-| Tên File                            | Chức năng chính                                                                         | Vai trò trong hệ thống RAG         |
-| :---------------------------------- | :-------------------------------------------------------------------------------------- | :--------------------------------- |
-| `src/ingestion/downloader.py`       | Tải tự động các file 10-K từ cổng SEC EDGAR API.                                        | Thu thập dữ liệu thô (Raw Data).   |
-| `src/ingestion/parser.py`           | Sử dụng BeautifulSoup để bóc tách mã HTML rác, trích xuất cấu trúc văn bản.             | Tiền xử lý dữ liệu (Parsing).      |
-| `src/ingestion/chunker.py`          | Phân mảnh văn bản theo kích thước chỉ định (256/512 tokens) kèm sliding window overlap. | Phân mảnh ngữ cảnh (Chunking).     |
-| `src/indexing/bm25_index.py`        | Lập chỉ mục từ khóa sử dụng thuật toán Okapi BM25.                                      | Lập chỉ mục Lexical Index.         |
-| `src/indexing/vector_index.py`      | Sử dụng `bge-small-en-v1.5` sinh dense vector và dựng đồ thị FAISS HNSW.                | Lập chỉ mục Semantic Index.        |
-| `src/retrieval/hybrid_retriever.py` | Chạy truy vấn song song BM25 + HNSW và gộp điểm bằng thuật toán RRF.                    | Tìm kiếm lai (Hybrid Retrieval).   |
-| `src/retrieval/reranker.py`         | Sử dụng mô hình Cross-Encoder để tính điểm tương quan sâu giữa query và doc.            | Tái xếp hạng (Reranking).          |
-| `src/generation/llm_client.py`      | Quản lý kết nối tới Groq Cloud API hoặc Ollama local chạy ngoại tuyến.                  | Sinh câu trả lời (LLM Generation). |
-| `src/api/main.py`                   | Điểm kết nối FastAPI, xử lý NLP Router, Query Expansion và phân phối 3 pipeline.        | Cổng kết nối (API Gateway).        |
-
----
-
-## 📓 Chi Tiết Bộ Notebooks Học Tập (`notebooks/`)
-
-Mục đích chính của thư mục `notebooks/` là giúp bạn **học và vấn đáp trực quan**. Toàn bộ các notebook sử dụng một **Corpus Mẫu (5 câu tài chính)** để người học và giáo viên có thể tính toán thủ công từng bước:
-
-### 1. `notebooks/preprocessing/` (Tiền xử lý)
-
-- `1_parsing_demo.ipynb`: Hướng dẫn trích xuất các phân mục (Item 1A, Item 7, Item 8) bằng Regex trên tài liệu HTML.
-- `2_chunking_demo.ipynb`: Trực quan hóa các chunk gối đầu nhau (Overlap) bằng kỹ thuật Sliding Window để không mất ngữ cảnh ở biên.
-
-### 2. `notebooks/baselines/` (Mô hình tìm kiếm)
-
-- `1_lexical/1a_demo_tfidf.ipynb`: Mô phỏng toán học Mô hình không gian Vector (VSM):
-  - Tự xây dựng từ điển từ vựng (Vocabulary).
-  - In ra **toàn bộ Ma trận TF**, **bảng IDF** và **Ma trận trọng số TF-IDF**.
-  - Minh họa từng phép nhân của độ tương đồng **Cosine Similarity** và phân tích lỗi khoảng cách từ vựng (Lexical Gap).
-- `1_lexical/1b_demo_bm25.ipynb`: Đi sâu vào thuật toán **Okapi BM25**:
-  - Công thức bão hòa tần suất từ ($k_1$) và cơ chế phạt độ dài văn bản ($b$).
-  - In **Ma trận trọng số BM25** đầy đủ giữa mọi tài liệu và từ vựng.
-- `2_vector/2a_demo_vector.ipynb`: Chuyển sang tìm kiếm ngữ nghĩa Dense Vector:
-  - Sinh vector biểu diễn 384 chiều bằng mô hình `bge-small-en-v1.5`.
-  - In ma trận tương quan ngữ nghĩa $5 \times 5$ giữa các tài liệu.
-  - **Trực quan hóa đồ thị HNSW 2D:** Sử dụng PCA giảm chiều xuống 2D, dùng NetworkX và Matplotlib vẽ cấu trúc liên kết đồ thị của FAISS.
-  - Chỉ ra lỗi **Nhiễu Thời gian (Temporal Mismatch)** khi số liệu năm 2024 đè lên năm 2023.
-- `3_enhanced/3a_demo_enhanced.ipynb`: Trình diễn luồng dữ liệu step-by-step cải tiến:
-  - **NLP Year Routing:** Regex trích xuất năm và áp dụng bộ lọc cứng loại bỏ nhiễu thời gian.
-  - **Query Expansion:** Mở rộng từ đồng nghĩa tự động.
-  - **RRF Fusion:** Gộp thứ hạng BM25 & HNSW (in bảng phân rã phân số RRF).
-  - **Cross-Encoder Reranking:** Đo độ tương quan sâu qua Attention chéo.
-
-### 3. `notebooks/eval/` (Đánh giá thực nghiệm)
-
-- `4_ablation_study_evaluation.ipynb`: Notebook chạy đối chiếu 5 cấu hình hệ thống trên bộ câu hỏi 80 queries:
-  - **Toán học IR:** Giải thích công thức Recall@5, MRR@5, NDCG@5.
-  - **Phân tích Trực quan:** Vẽ 4 loại biểu đồ (Biểu đồ cột chất lượng, Heatmap hiệu năng danh mục, Bản đồ phân tán Latency-Pareto Frontier, Biểu đồ cột phân rã Recall).
-  - **Hỏi & Đáp phản biện:** Cung cấp sẵn các tài liệu vấn đáp cho giáo viên NLP.
+| File Path                           | Core Functionality                                                        | Role in RAG System      |
+| :---------------------------------- | :------------------------------------------------------------------------ | :---------------------- |
+| `src/ingestion/downloader.py`       | Automatically downloads 10-K filings from the SEC EDGAR API.              | Data Acquisition        |
+| `src/ingestion/parser.py`           | Parses SEC HTML files, stripping clutter using BeautifulSoup.             | Preprocessing & Parsing |
+| `src/ingestion/chunker.py`          | Splits text into chunks with overlap using sliding window.                | Context Segmentation    |
+| `src/indexing/bm25_index.py`        | Builds keyword indexes using the Okapi BM25 ranking algorithm.            | Lexical Indexing        |
+| `src/indexing/vector_index.py`      | Generates 384-dim dense vectors (`bge-small-en-v1.5`) & FAISS HNSW graph. | Semantic Indexing       |
+| `src/retrieval/hybrid_retriever.py` | Runs parallel keyword/dense queries & combines ranks using RRF.           | Hybrid Retrieval        |
+| `src/retrieval/reranker.py`         | Scores cross-attention relevance using a Cross-Encoder.                   | Reranking               |
+| `src/generation/llm_client.py`      | Manages connections to Groq Cloud API or Local Ollama.                    | LLM Answer Generation   |
+| `src/api/main.py`                   | FastAPI gateway managing NLP routers, expansion, & pipelines.             | API Router Gateway      |
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy
+## 📓 Academic Jupyter Notebooks (`notebooks/`)
+
+The `notebooks/` folder contains step-by-step walkthroughs using a **sample 5-document corpus** designed to teach the inner workings of NLP/IR algorithms:
+
+### 1. `notebooks/preprocessing/`
+
+- `1_parsing_demo.ipynb`: Regex extraction of Item 1A, Item 7, and Item 8 headers from raw HTML.
+- `2_chunking_demo.ipynb`: Visualizing context preservation at boundary edges via sliding windows.
+
+### 2. `notebooks/baselines/`
+
+- `1_lexical/1a_demo_tfidf.ipynb`: Vector Space Model (VSM) calculations:
+  - Generates custom Vocabulary dictionary.
+  - Prints the complete **TF Matrix**, **IDF Vector**, and **TF-IDF Weight Matrix**.
+  - Calculates Cosine Similarity manually and highlights _Lexical Gap_ failures.
+- `1_lexical/1b_demo_bm25.ipynb`: Explores the **Okapi BM25** ranking function:
+  - Shows how the saturation parameter ($k_1$) and length normalization ($b$) affect ranking.
+  - Prints full query-document weight scoring matrices.
+- `2_vector/2a_demo_vector.ipynb`: Explores semantic embeddings and vector similarity:
+  - Embeds sentences into 384-dimensional spaces using `BAAI/bge-small-en-v1.5`.
+  - Prints a $5 \times 5$ document-to-document similarity heatmap.
+  - **HNSW 2D Graph Plot:** Performs PCA reduction to 2D and draws the FAISS graph topology using NetworkX.
+  - Analyzes the _Temporal Mismatch_ error.
+- `3_enhanced/3a_demo_enhanced.ipynb`: Step-by-step run of the full enhanced pipeline:
+  - **NLP Year Routing:** Filtering search space via regex.
+  - **Query Expansion:** Adding synonyms to lexical queries.
+  - **RRF Fusion:** Fraction-level breakdown of Rank Fusion calculations.
+  - **Cross-Encoder Reranking:** Showing query-document attention pair logits.
+
+---
+
+## 🚀 Installation & Operation
 
 > [!NOTE]
-> **Dữ liệu chỉ mục đã được dựng sẵn:** Các tệp cơ sở dữ liệu và chỉ mục tìm kiếm (BM25 `.pkl` và FAISS `.faiss` trong thư mục `data/indexes/`) đã được tính toán và đẩy kèm trong kho mã nguồn này. Bạn **không cần chạy lại bước xây dựng chỉ mục**, chỉ cần cấu hình khóa API Groq là có thể chạy thử nghiệm chatbot ngay lập tức.
+> **Pre-built Indices Included:** The BM25 index (`bm25_index.pkl`) and FAISS vector index (`vector_index.faiss`) are already built and included in `data/indexes/`. You **do not need to build indices**; simply configure your Groq API key to start querying.
 
-### Yêu cầu hệ thống
+### System Requirements
 
-- Python 3.10 trở lên.
-- Groq API Key (Đăng ký miễn phí tại [Groq Console](https://console.groq.com)).
+- Python 3.10+
+- Groq API Key (Register for a free key at [Groq Console](https://console.groq.com)).
 
-### 1. Khởi tạo môi trường ảo & Cài đặt thư viện
+### 1. Environment Setup
+
+Clone the repository, initialize a virtual environment, and install dependencies:
 
 ```powershell
-# Tạo venv
 python -m venv venv
-# Kích hoạt venv trên Windows
 venv\Scripts\activate
-# Cài đặt dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Cấu hình biến môi trường
+### 2. Configure Environment Variables
 
-Tạo file `.env` tại thư mục gốc của dự án với nội dung:
+Create a `.env` file in the project root folder:
 
-```env
-GROQ_API_KEY=your_api_key_here
+```ini
+GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 3. Chạy hệ thống (Chạy song song 2 Terminal)
-
-**Terminal 1: Khởi chạy FastAPI Backend Server**
+### 3. Run Backend API Server (FastAPI)
 
 ```powershell
 $env:PYTHONUTF8=1
 venv\Scripts\python -m uvicorn src.api.main:app --host 127.0.0.1 --port 8000
 ```
 
-_(Đợi log xuất hiện chữ: `API khởi động và nạp chỉ mục thành công!`)_
-
-**Terminal 2: Khởi chạy Streamlit Frontend UI**
+### 4. Run Frontend Chat Interface (Streamlit)
 
 ```powershell
 venv\Scripts\streamlit run app/streamlit_app.py
 ```
 
-_(Trình duyệt sẽ tự động mở trang giao diện tại địa chỉ `http://localhost:8501`)_
+Open [http://localhost:8501](http://localhost:8501) in your browser.
 
-### 4. Tự chạy lại đánh giá thực nghiệm (Ablation Study)
+---
 
-Bạn có thể tự chạy lại chương trình đánh giá 80 câu hỏi kiểm thử trên 5 cấu hình để ghi đè kết quả và xuất lại biểu đồ mới:
+## 📈 Evaluation & Ablation Study
+
+Run the ablation runner to verify system configurations (Config A to Config E) against the 80 standard benchmark queries:
 
 ```powershell
 venv\Scripts\python eval/scripts/run_evaluation.py
 ```
 
-*   **Kết quả thô (JSON):** Tự động ghi đè tại `eval/results/`.
-*   **Biểu đồ so sánh (PNG):** Tự động cập nhật tại `eval/figures/`.
+### Performance Summary
 
----
+| Configuration                  |  Recall@5  |   MRR@5    |   NDCG@5   |  Latency (Avg)   |
+| :----------------------------- | :--------: | :--------: | :--------: | :--------------: |
+| **Config A (TF-IDF Baseline)** |   0.0594   |   0.0519   |   0.0416   |     ~6.9 ms      |
+| **Config B (BM25 Baseline)**   |   0.1125   |   0.1540   |   0.1019   |     ~18.4 ms     |
+| **Config C (Dense HNSW)**      |   0.1844   |   0.1985   |   0.1519   |     ~57.7 ms     |
+| **Config D (Hybrid - RRF)**    |   0.1844   | **0.2431** |   0.1640   |     ~63.1 ms     |
+| **Config E (Enhanced RAG)**    | **0.2531** |   0.2350   | **0.1885** | ~2289.9 ms (CPU) |
 
-## 🧪 Kịch Bản Demo Vấn Đáp (Đối Chiếu Lỗi & Sửa Lỗi)
+Detailed analysis and visualizations are documented in:
 
-Khi thuyết trình trực tiếp cho giáo viên, hãy nhập 2 câu hỏi sau và đổi chế độ Pipeline trên Sidebar để đối chiếu:
-
-### Câu 1: Lỗi khoảng cách từ vựng (Lexical Gap)
-
-- **Query:** `What are Amazon's capital expenditures in 2023?`
-  - _Sự thật:_ Báo cáo Amazon không dùng từ `"capital expenditures"` mà dùng `"purchases of property and equipment"`.
-  - **Chạy Baseline 1 (BM25 Lexical):** Trả về điểm số thấp hoặc báo không tìm thấy thông tin vì lệch từ khóa thô.
-  - **Chạy Enhanced RAG:** Tìm ra chính xác số liệu **$52,729 million** nhờ cơ chế **Query Expansion** tự động dịch cụm từ đồng nghĩa.
-
-### Câu 2: Lỗi nhiễu thời gian (Temporal Mismatch)
-
-- **Query:** `What was NVIDIA's net income in 2023?`
-  - _Sự thật:_ Dữ liệu mẫu chỉ nạp doanh thu NVIDIA năm **2024** ($29,760 million). Không có năm **2023**.
-  - **Chạy Baseline 2 (Dense Vector HNSW):** Trả về số liệu của năm **2024** vì vector ngữ nghĩa `"NVIDIA net income"` tương đồng cao, bỏ qua chữ số năm.
-  - **Chạy Enhanced RAG:** Trả lời chính xác **Không tìm thấy thông tin** (hoặc trích dẫn đúng năm 2023 từ bảng đối chiếu nếu có) vì **NLP Year Routing** đã trích xuất số `2023` và lọc cứng loại bỏ tài liệu năm 2024 ngay từ bước đầu.
+- **Academic Report:** [ablation_report.md](file:///c:/Users/huynh/Desktop/NLP-project/eval/ablation_report.md)
+- **Jupyter Evaluation Notebook:** [4_ablation_study_evaluation.ipynb](file:///c:/Users/huynh/Desktop/NLP-project/notebooks/4_ablation_study_evaluation.ipynb)

@@ -17,7 +17,7 @@
     "recall": 0.5,
     "mrr": 0.3333333333333333,
     "ndcg": 0.3065735963827292,
-    "latency_ms": 91.96990000782534
+    "latency_ms": 71.26850000349805
   },
   {
     "query_id": "q_02",
@@ -37,7 +37,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 75.24580000608694
+    "latency_ms": 53.90549999719951
   },
   {
     "query_id": "q_03",
@@ -57,15 +57,15 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 83.83489999687299
+    "latency_ms": 60.543600004166365
   },
   {
     "query_id": "q_04",
     "category": "factual",
     "query": "What was Tesla's total revenues in fiscal year 2022?",
     "retrieved_ids": [
-      "TSLA_2022_10K_Item8_c004",
       "TSLA_2022_10K_Item8_c061",
+      "TSLA_2022_10K_Item8_c004",
       "TSLA_2023_10K_Item8_c004",
       "TSLA_2024_10K_Item8_c004",
       "TSLA_2022_10K_Item8_c005"
@@ -75,20 +75,20 @@
       "TSLA_2022_10K_Item8_c061"
     ],
     "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.38685280723454163,
-    "latency_ms": 82.86229999794159
+    "mrr": 1.0,
+    "ndcg": 0.6131471927654584,
+    "latency_ms": 66.32290000561625
   },
   {
     "query_id": "q_05",
     "category": "factual",
     "query": "What was Amazon's net income in fiscal year 2024?",
     "retrieved_ids": [
-      "AMZN_2022_10K_Item8_c004",
       "NVDA_2024_10K_Item7_c010",
+      "AMZN_2022_10K_Item8_c004",
       "AMZN_2023_10K_Item8_c004",
       "MSFT_2024_10K_Item8_c025",
-      "AMZN_2024_10K_Item8_c004"
+      "MSFT_2024_10K_Item7_c008"
     ],
     "gt_chunks": [
       "AMZN_2024_10K_Item8_c042",
@@ -97,7 +97,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 53.74029999074992
+    "latency_ms": 57.29560001054779
   },
   {
     "query_id": "q_06",
@@ -107,8 +107,8 @@
       "NVDA_2023_10K_Item7_c010",
       "GOOGL_2023_10K_Item8_c007",
       "NVDA_2023_10K_Item7_c012",
-      "GOOGL_2022_10K_Item8_c007",
-      "NVDA_2022_10K_Item7_c013"
+      "NVDA_2022_10K_Item7_c013",
+      "GOOGL_2022_10K_Item8_c007"
     ],
     "gt_chunks": [
       "GOOGL_2023_10K_Item7_c011",
@@ -117,7 +117,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 55.89630000758916
+    "latency_ms": 61.00089999381453
   },
   {
     "query_id": "q_07",
@@ -128,7 +128,7 @@
       "AAPL_2024_10K_Item7_c002",
       "AAPL_2023_10K_Item8_c012",
       "AAPL_2023_10K_Item7_c000",
-      "TSLA_2023_10K_Item7_c012"
+      "AAPL_2024_10K_Item7_c000"
     ],
     "gt_chunks": [
       "AAPL_2023_10K_Item7_c003",
@@ -137,7 +137,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 65.33779999881517
+    "latency_ms": 66.90819999494124
   },
   {
     "query_id": "q_08",
@@ -157,7 +157,7 @@
     "recall": 0.5,
     "mrr": 0.25,
     "ndcg": 0.2640681225725909,
-    "latency_ms": 63.59299999894574
+    "latency_ms": 54.24280000443105
   },
   {
     "query_id": "q_09",
@@ -177,7 +177,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 56.73550000938121
+    "latency_ms": 53.24480000126641
   },
   {
     "query_id": "q_10",
@@ -197,7 +197,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 60.80089999886695
+    "latency_ms": 55.58949999976903
   },
   {
     "query_id": "q_11",
@@ -206,8 +206,8 @@
     "retrieved_ids": [
       "GOOGL_2023_10K_Item7_c013",
       "GOOGL_2024_10K_Item8_c039",
-      "GOOGL_2022_10K_Item8_c005",
       "NVDA_2024_10K_Item7_c010",
+      "GOOGL_2022_10K_Item8_c005",
       "GOOGL_2023_10K_Item8_c005"
     ],
     "gt_chunks": [
@@ -217,7 +217,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 60.20120000175666
+    "latency_ms": 67.75190000189468
   },
   {
     "query_id": "q_12",
@@ -237,7 +237,7 @@
     "recall": 0.5,
     "mrr": 0.3333333333333333,
     "ndcg": 0.3065735963827292,
-    "latency_ms": 61.32259999867529
+    "latency_ms": 51.95579999417532
   },
   {
     "query_id": "q_13",
@@ -257,7 +257,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 55.76979999023024
+    "latency_ms": 50.754600000800565
   },
   {
     "query_id": "q_14",
@@ -268,7 +268,7 @@
       "NVDA_2024_10K_Item7_c005",
       "NVDA_2023_10K_Item8_c004",
       "NVDA_2024_10K_Item7_c004",
-      "NVDA_2023_10K_Item8_c024"
+      "NVDA_2024_10K_Item8_c023"
     ],
     "gt_chunks": [
       "NVDA_2024_10K_Item8_c024",
@@ -277,7 +277,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 58.8729000010062
+    "latency_ms": 52.17589999665506
   },
   {
     "query_id": "q_15",
@@ -297,7 +297,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 74.71939999959432
+    "latency_ms": 91.14809999300633
   },
   {
     "query_id": "q_16",
@@ -317,7 +317,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 62.43809999432415
+    "latency_ms": 87.47820000280626
   },
   {
     "query_id": "q_17",
@@ -337,7 +337,7 @@
     "recall": 0.5,
     "mrr": 0.25,
     "ndcg": 0.2640681225725909,
-    "latency_ms": 62.88019999919925
+    "latency_ms": 85.5435999983456
   },
   {
     "query_id": "q_18",
@@ -345,10 +345,10 @@
     "query": "What was Amazon's operating income in 2023?",
     "retrieved_ids": [
       "AMZN_2023_10K_Item7_c008",
-      "AMZN_2023_10K_Item8_c031",
       "AMZN_2023_10K_Item7_c009",
-      "AMZN_2022_10K_Item8_c030",
-      "AMZN_2022_10K_Item8_c004"
+      "AMZN_2023_10K_Item8_c031",
+      "AMZN_2022_10K_Item8_c004",
+      "AMZN_2022_10K_Item8_c030"
     ],
     "gt_chunks": [
       "AMZN_2023_10K_Item7_c008",
@@ -357,7 +357,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 59.728699998231605
+    "latency_ms": 84.63840000331402
   },
   {
     "query_id": "q_19",
@@ -377,7 +377,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 62.68040000577457
+    "latency_ms": 58.649300000979565
   },
   {
     "query_id": "q_20",
@@ -397,7 +397,7 @@
     "recall": 0.5,
     "mrr": 0.5,
     "ndcg": 0.38685280723454163,
-    "latency_ms": 59.8255000077188
+    "latency_ms": 57.1096000057878
   },
   {
     "query_id": "q_21",
@@ -419,7 +419,7 @@
     "recall": 0.25,
     "mrr": 1.0,
     "ndcg": 0.3903800499921017,
-    "latency_ms": 59.12420000822749
+    "latency_ms": 51.21130000043195
   },
   {
     "query_id": "q_22",
@@ -441,7 +441,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 61.79810001049191
+    "latency_ms": 56.69149999448564
   },
   {
     "query_id": "q_23",
@@ -463,7 +463,7 @@
     "recall": 0.25,
     "mrr": 1.0,
     "ndcg": 0.3903800499921017,
-    "latency_ms": 74.63410000491422
+    "latency_ms": 68.27080000948627
   },
   {
     "query_id": "q_24",
@@ -485,7 +485,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 71.90529999206774
+    "latency_ms": 73.49640000029467
   },
   {
     "query_id": "q_25",
@@ -495,8 +495,8 @@
       "NVDA_2024_10K_Item7_c005",
       "NVDA_2022_10K_Item7_c004",
       "NVDA_2024_10K_Item7_c004",
-      "NVDA_2024_10K_Item8_c016",
-      "NVDA_2023_10K_Item7_c008"
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2024_10K_Item8_c016"
     ],
     "gt_chunks": [
       "NVDA_2023_10K_Item8_c021",
@@ -507,7 +507,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 45.75840001052711
+    "latency_ms": 43.69270001188852
   },
   {
     "query_id": "q_26",
@@ -516,9 +516,9 @@
     "retrieved_ids": [
       "MSFT_2024_10K_Item7_c002",
       "MSFT_2023_10K_Item8_c035",
-      "MSFT_2022_10K_Item8_c036",
       "NVDA_2022_10K_Item7_c013",
-      "MSFT_2022_10K_Item7_c005"
+      "MSFT_2022_10K_Item8_c036",
+      "MSFT_2023_10K_Item7_c015"
     ],
     "gt_chunks": [
       "MSFT_2022_10K_Item7_c014",
@@ -526,10 +526,10 @@
       "MSFT_2023_10K_Item7_c015",
       "MSFT_2023_10K_Item7_c013"
     ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 53.11230001098011
+    "recall": 0.25,
+    "mrr": 0.2,
+    "ndcg": 0.15101961822780524,
+    "latency_ms": 50.44069999712519
   },
   {
     "query_id": "q_27",
@@ -539,8 +539,8 @@
       "MSFT_2024_10K_Item8_c037",
       "MSFT_2022_10K_Item7_c005",
       "GOOGL_2023_10K_Item7_c012",
-      "MSFT_2024_10K_Item7_c008",
-      "GOOGL_2024_10K_Item7_c000"
+      "GOOGL_2024_10K_Item7_c000",
+      "MSFT_2024_10K_Item7_c008"
     ],
     "gt_chunks": [
       "GOOGL_2024_10K_Item7_c011",
@@ -551,7 +551,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 55.623099993681535
+    "latency_ms": 54.36850000114646
   },
   {
     "query_id": "q_28",
@@ -560,8 +560,8 @@
     "retrieved_ids": [
       "AAPL_2024_10K_Item8_c001",
       "AAPL_2024_10K_Item8_c002",
-      "AAPL_2024_10K_Item7_c000",
       "AMZN_2024_10K_Item7_c005",
+      "AAPL_2024_10K_Item7_c000",
       "AAPL_2024_10K_Item8_c003"
     ],
     "gt_chunks": [
@@ -571,7 +571,7 @@
     "recall": 0.5,
     "mrr": 0.2,
     "ndcg": 0.23719771276929622,
-    "latency_ms": 68.15459999779705
+    "latency_ms": 63.69219999760389
   },
   {
     "query_id": "q_29",
@@ -593,7 +593,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 68.40299999748822
+    "latency_ms": 56.13749999611173
   },
   {
     "query_id": "q_30",
@@ -615,7 +615,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 64.91309999546502
+    "latency_ms": 54.14930000551976
   },
   {
     "query_id": "q_31",
@@ -624,8 +624,8 @@
     "retrieved_ids": [
       "NVDA_2024_10K_Item1A_c005",
       "NVDA_2024_10K_Item7_c005",
-      "NVDA_2022_10K_Item1A_c002",
       "NVDA_2024_10K_Item7_c004",
+      "NVDA_2022_10K_Item1A_c002",
       "NVDA_2024_10K_Item1A_c058"
     ],
     "gt_chunks": [
@@ -635,7 +635,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 65.78560000343714
+    "latency_ms": 53.91799999051727
   },
   {
     "query_id": "q_32",
@@ -657,7 +657,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 67.38380000751931
+    "latency_ms": 58.590600005118176
   },
   {
     "query_id": "q_33",
@@ -667,8 +667,8 @@
       "MSFT_2023_10K_Item7_c008",
       "MSFT_2024_10K_Item7_c007",
       "NVDA_2024_10K_Item7_c010",
-      "MSFT_2022_10K_Item7_c007",
-      "MSFT_2022_10K_Item1_c020"
+      "MSFT_2022_10K_Item1_c020",
+      "MSFT_2022_10K_Item7_c007"
     ],
     "gt_chunks": [
       "MSFT_2023_10K_Item7_c008",
@@ -679,7 +679,7 @@
     "recall": 0.25,
     "mrr": 1.0,
     "ndcg": 0.3903800499921017,
-    "latency_ms": 64.6277000050759
+    "latency_ms": 56.23250000644475
   },
   {
     "query_id": "q_34",
@@ -701,7 +701,7 @@
     "recall": 0.5,
     "mrr": 0.25,
     "ndcg": 0.3191471544989227,
-    "latency_ms": 51.719900002353825
+    "latency_ms": 59.541800001170486
   },
   {
     "query_id": "q_35",
@@ -721,7 +721,7 @@
     "recall": 0.5,
     "mrr": 0.5,
     "ndcg": 0.38685280723454163,
-    "latency_ms": 60.07269999827258
+    "latency_ms": 54.73000000347383
   },
   {
     "query_id": "q_36",
@@ -743,7 +743,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 66.23669998953119
+    "latency_ms": 65.96420001005754
   },
   {
     "query_id": "q_37",
@@ -765,7 +765,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.5585075862632192,
-    "latency_ms": 75.48060000408441
+    "latency_ms": 67.8083999955561
   },
   {
     "query_id": "q_38",
@@ -774,8 +774,8 @@
     "retrieved_ids": [
       "AMZN_2022_10K_Item8_c004",
       "AMZN_2024_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c032",
       "AMZN_2023_10K_Item8_c004",
+      "AMZN_2024_10K_Item8_c032",
       "AMZN_2024_10K_Item8_c004"
     ],
     "gt_chunks": [
@@ -783,9 +783,9 @@
       "AMZN_2024_10K_Item8_c004"
     ],
     "recall": 1.0,
-    "mrr": 0.25,
-    "ndcg": 0.5012658353418871,
-    "latency_ms": 62.2367000032682
+    "mrr": 0.3333333333333333,
+    "ndcg": 0.5437713091520254,
+    "latency_ms": 46.06919999059755
   },
   {
     "query_id": "q_39",
@@ -807,7 +807,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6366824387328317,
-    "latency_ms": 52.90470000181813
+    "latency_ms": 48.92900001141243
   },
   {
     "query_id": "q_40",
@@ -829,7 +829,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 64.41769999219105
+    "latency_ms": 54.26979999174364
   },
   {
     "query_id": "q_41",
@@ -837,8 +837,8 @@
     "query": "What was Amazon capex in fiscal year 2023?",
     "retrieved_ids": [
       "NVDA_2023_10K_Item7_c010",
-      "AMZN_2023_10K_Item8_c031",
       "AMZN_2022_10K_Item8_c004",
+      "AMZN_2023_10K_Item8_c031",
       "AMZN_2023_10K_Item8_c004",
       "AMZN_2022_10K_Item8_c030"
     ],
@@ -849,7 +849,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 71.7992999998387
+    "latency_ms": 58.19270000210963
   },
   {
     "query_id": "q_42",
@@ -859,8 +859,8 @@
       "AAPL_2024_10K_Item8_c001",
       "AAPL_2024_10K_Item7_c002",
       "AAPL_2024_10K_Item7_c003",
-      "AAPL_2023_10K_Item1A_c034",
-      "AAPL_2024_10K_Item7_c000"
+      "AAPL_2024_10K_Item7_c000",
+      "AAPL_2023_10K_Item1A_c034"
     ],
     "gt_chunks": [
       "AAPL_2024_10K_Item8_c000",
@@ -869,7 +869,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 71.7947999946773
+    "latency_ms": 57.52799999027047
   },
   {
     "query_id": "q_43",
@@ -880,7 +880,7 @@
       "MSFT_2024_10K_Item7_c008",
       "MSFT_2024_10K_Item8_c037",
       "MSFT_2024_10K_Item7_c005",
-      "MSFT_2022_10K_Item8_c036"
+      "MSFT_2024_10K_Item8_c025"
     ],
     "gt_chunks": [
       "MSFT_2024_10K_Item7_c005",
@@ -889,7 +889,7 @@
     "recall": 0.5,
     "mrr": 0.25,
     "ndcg": 0.2640681225725909,
-    "latency_ms": 48.36089999298565
+    "latency_ms": 44.742199999745935
   },
   {
     "query_id": "q_44",
@@ -899,8 +899,8 @@
       "GOOGL_2023_10K_Item7_c008",
       "NVDA_2023_10K_Item7_c009",
       "GOOGL_2022_10K_Item7_c012",
-      "GOOGL_2023_10K_Item8_c008",
-      "GOOGL_2024_10K_Item7_c011"
+      "GOOGL_2024_10K_Item7_c011",
+      "GOOGL_2023_10K_Item8_c008"
     ],
     "gt_chunks": [
       "GOOGL_2023_10K_Item8_c038",
@@ -909,15 +909,15 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 59.14380001195241
+    "latency_ms": 49.52150001190603
   },
   {
     "query_id": "q_45",
     "category": "lexical_gap",
     "query": "What was Nvidia's net profit in fiscal year 2024?",
     "retrieved_ids": [
-      "NVDA_2024_10K_Item7_c004",
       "NVDA_2023_10K_Item7_c008",
+      "NVDA_2024_10K_Item7_c004",
       "NVDA_2022_10K_Item7_c004",
       "NVDA_2024_10K_Item7_c009",
       "NVDA_2024_10K_Item7_c005"
@@ -929,7 +929,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 71.89600000856444
+    "latency_ms": 63.63469999632798
   },
   {
     "query_id": "q_46",
@@ -949,7 +949,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 51.763399998890236
+    "latency_ms": 59.08350000390783
   },
   {
     "query_id": "q_47",
@@ -969,7 +969,7 @@
     "recall": 0.5,
     "mrr": 0.3333333333333333,
     "ndcg": 0.3065735963827292,
-    "latency_ms": 53.9137000014307
+    "latency_ms": 47.89380000147503
   },
   {
     "query_id": "q_48",
@@ -989,7 +989,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 59.42910000158008
+    "latency_ms": 46.83120000117924
   },
   {
     "query_id": "q_49",
@@ -1009,7 +1009,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 48.14070000429638
+    "latency_ms": 47.30139998719096
   },
   {
     "query_id": "q_50",
@@ -1017,8 +1017,8 @@
     "query": "What was Amazon's total revenue in 2024?",
     "retrieved_ids": [
       "AMZN_2024_10K_Item8_c009",
-      "AMZN_2022_10K_Item8_c004",
       "AMZN_2024_10K_Item8_c021",
+      "AMZN_2022_10K_Item8_c004",
       "AMZN_2023_10K_Item8_c004",
       "AMZN_2024_10K_Item8_c031"
     ],
@@ -1029,7 +1029,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 60.50849999883212
+    "latency_ms": 52.74549999739975
   },
   {
     "query_id": "q_51",
@@ -1038,8 +1038,8 @@
     "retrieved_ids": [
       "TSLA_2024_10K_Item8_c046",
       "TSLA_2024_10K_Item8_c006",
-      "TSLA_2022_10K_Item8_c061",
       "TSLA_2024_10K_Item8_c049",
+      "TSLA_2022_10K_Item8_c061",
       "TSLA_2022_10K_Item8_c004"
     ],
     "gt_chunks": [
@@ -1049,7 +1049,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 53.67839999962598
+    "latency_ms": 55.574199999682605
   },
   {
     "query_id": "q_52",
@@ -1069,7 +1069,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 52.70820000441745
+    "latency_ms": 49.44190000242088
   },
   {
     "query_id": "q_53",
@@ -1089,7 +1089,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 52.42500000167638
+    "latency_ms": 48.56179999478627
   },
   {
     "query_id": "q_54",
@@ -1109,7 +1109,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 58.84310000692494
+    "latency_ms": 55.40120000659954
   },
   {
     "query_id": "q_55",
@@ -1129,7 +1129,7 @@
     "recall": 0.5,
     "mrr": 0.5,
     "ndcg": 0.38685280723454163,
-    "latency_ms": 59.65270000160672
+    "latency_ms": 49.470699988887645
   },
   {
     "query_id": "q_56",
@@ -1137,8 +1137,8 @@
     "query": "What was Google's technology expenditure in 2023?",
     "retrieved_ids": [
       "GOOGL_2023_10K_Item7_c008",
-      "GOOGL_2022_10K_Item7_c008",
       "GOOGL_2024_10K_Item7_c008",
+      "GOOGL_2022_10K_Item7_c008",
       "GOOGL_2023_10K_Item7_c011",
       "GOOGL_2024_10K_Item7_c011"
     ],
@@ -1149,7 +1149,7 @@
     "recall": 0.5,
     "mrr": 0.25,
     "ndcg": 0.2640681225725909,
-    "latency_ms": 54.72699999518227
+    "latency_ms": 42.39909999887459
   },
   {
     "query_id": "q_57",
@@ -1160,7 +1160,7 @@
       "NVDA_2024_10K_Item7_c004",
       "GOOGL_2024_10K_Item8_c039",
       "NVDA_2024_10K_Item7_c005",
-      "TSLA_2023_10K_Item7_c012"
+      "NVDA_2022_10K_Item7_c004"
     ],
     "gt_chunks": [
       "NVDA_2024_10K_Item7_c010",
@@ -1169,7 +1169,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 56.38870000257157
+    "latency_ms": 49.30259998945985
   },
   {
     "query_id": "q_58",
@@ -1189,7 +1189,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 59.15840000670869
+    "latency_ms": 59.24409998988267
   },
   {
     "query_id": "q_59",
@@ -1198,9 +1198,9 @@
     "retrieved_ids": [
       "MSFT_2023_10K_Item7_c008",
       "TSLA_2024_10K_Item7_c012",
-      "GOOGL_2023_10K_Item8_c041",
       "MSFT_2022_10K_Item8_c036",
-      "GOOGL_2024_10K_Item8_c039"
+      "GOOGL_2023_10K_Item8_c041",
+      "MSFT_2024_10K_Item8_c037"
     ],
     "gt_chunks": [
       "MSFT_2024_10K_Item7_c007",
@@ -1209,7 +1209,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 67.4557000020286
+    "latency_ms": 59.39840000064578
   },
   {
     "query_id": "q_60",
@@ -1229,7 +1229,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 60.1466999942204
+    "latency_ms": 45.95770000014454
   },
   {
     "query_id": "q_61",
@@ -1249,7 +1249,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 66.03780000295956
+    "latency_ms": 52.9470999899786
   },
   {
     "query_id": "q_62",
@@ -1269,7 +1269,7 @@
     "recall": 0.5,
     "mrr": 0.25,
     "ndcg": 0.2640681225725909,
-    "latency_ms": 94.88260000944138
+    "latency_ms": 56.29999999655411
   },
   {
     "query_id": "q_63",
@@ -1289,7 +1289,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 88.49389999522828
+    "latency_ms": 70.16450000810437
   },
   {
     "query_id": "q_64",
@@ -1309,7 +1309,7 @@
     "recall": 0.5,
     "mrr": 0.5,
     "ndcg": 0.38685280723454163,
-    "latency_ms": 59.615299993311055
+    "latency_ms": 68.18940000084694
   },
   {
     "query_id": "q_65",
@@ -1320,7 +1320,7 @@
       "AMZN_2023_10K_Item7_c008",
       "AMZN_2022_10K_Item7_c008",
       "AMZN_2024_10K_Item8_c026",
-      "AMZN_2024_10K_Item8_c018"
+      "AMZN_2022_10K_Item8_c004"
     ],
     "gt_chunks": [
       "AMZN_2023_10K_Item8_c004",
@@ -1329,7 +1329,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 71.99280000349972
+    "latency_ms": 40.36110000743065
   },
   {
     "query_id": "q_66",
@@ -1349,7 +1349,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 61.13980000372976
+    "latency_ms": 57.086999993771315
   },
   {
     "query_id": "q_67",
@@ -1369,7 +1369,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 95.32290000061039
+    "latency_ms": 57.14449999504723
   },
   {
     "query_id": "q_68",
@@ -1380,16 +1380,16 @@
       "MSFT_2023_10K_Item8_c035",
       "AMZN_2024_10K_Item7_c012",
       "MSFT_2022_10K_Item1_c000",
-      "MSFT_2024_10K_Item7_c008"
+      "MSFT_2023_10K_Item7_c008"
     ],
     "gt_chunks": [
       "MSFT_2023_10K_Item7_c007",
       "MSFT_2023_10K_Item7_c008"
     ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 80.34099999349564
+    "recall": 0.5,
+    "mrr": 0.2,
+    "ndcg": 0.23719771276929622,
+    "latency_ms": 64.68379999569152
   },
   {
     "query_id": "q_69",
@@ -1400,7 +1400,7 @@
       "TSLA_2023_10K_Item7_c001",
       "TSLA_2024_10K_Item8_c045",
       "TSLA_2022_10K_Item8_c061",
-      "TSLA_2022_10K_Item8_c004"
+      "TSLA_2022_10K_Item8_c053"
     ],
     "gt_chunks": [
       "TSLA_2022_10K_Item8_c005",
@@ -1409,7 +1409,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 63.63180000334978
+    "latency_ms": 62.882399986847304
   },
   {
     "query_id": "q_70",
@@ -1429,7 +1429,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 72.7067999978317
+    "latency_ms": 51.73639999702573
   },
   {
     "query_id": "q_71",
@@ -1449,7 +1449,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 60.24669999897014
+    "latency_ms": 53.496999986236915
   },
   {
     "query_id": "q_72",
@@ -1469,7 +1469,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 72.2995000105584
+    "latency_ms": 63.22129999171011
   },
   {
     "query_id": "q_73",
@@ -1489,7 +1489,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 58.07309999363497
+    "latency_ms": 61.02150000515394
   },
   {
     "query_id": "q_74",
@@ -1498,8 +1498,8 @@
     "retrieved_ids": [
       "NVDA_2023_10K_Item8_c024",
       "NVDA_2024_10K_Item8_c035",
-      "NVDA_2023_10K_Item8_c037",
       "NVDA_2024_10K_Item8_c024",
+      "NVDA_2023_10K_Item8_c037",
       "NVDA_2023_10K_Item7_c004"
     ],
     "gt_chunks": [
@@ -1509,7 +1509,7 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 55.38800000795163
+    "latency_ms": 59.06729999696836
   },
   {
     "query_id": "q_75",
@@ -1529,7 +1529,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 62.99540000327397
+    "latency_ms": 58.879000003798865
   },
   {
     "query_id": "q_76",
@@ -1549,7 +1549,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 63.41230000543874
+    "latency_ms": 67.23909999709576
   },
   {
     "query_id": "q_77",
@@ -1559,8 +1559,8 @@
       "TSLA_2024_10K_Item8_c006",
       "TSLA_2024_10K_Item7_c016",
       "TSLA_2022_10K_Item8_c005",
-      "TSLA_2023_10K_Item8_c006",
-      "TSLA_2022_10K_Item8_c058"
+      "TSLA_2022_10K_Item8_c058",
+      "TSLA_2023_10K_Item8_c006"
     ],
     "gt_chunks": [
       "TSLA_2023_10K_Item8_c031",
@@ -1569,7 +1569,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 63.376999998581596
+    "latency_ms": 59.22019999707118
   },
   {
     "query_id": "q_78",
@@ -1578,9 +1578,9 @@
     "retrieved_ids": [
       "AMZN_2023_10K_Item8_c032",
       "AMZN_2022_10K_Item8_c004",
-      "AMZN_2023_10K_Item8_c031",
       "AMZN_2023_10K_Item8_c004",
-      "AMZN_2022_10K_Item8_c031"
+      "AMZN_2023_10K_Item8_c031",
+      "AMZN_2023_10K_Item7_c009"
     ],
     "gt_chunks": [
       "AMZN_2022_10K_Item8_c041",
@@ -1589,7 +1589,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 49.290800001472235
+    "latency_ms": 48.52979999850504
   },
   {
     "query_id": "q_79",
@@ -1609,7 +1609,7 @@
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 39.4765999953961
+    "latency_ms": 45.91439999057911
   },
   {
     "query_id": "q_80",
@@ -1620,7 +1620,7 @@
       "NVDA_2024_10K_Item7_c009",
       "NVDA_2024_10K_Item7_c004",
       "NVDA_2024_10K_Item7_c005",
-      "NVDA_2022_10K_Item7_c004"
+      "TSLA_2024_10K_Item8_c053"
     ],
     "gt_chunks": [
       "NVDA_2023_10K_Item8_c024",
@@ -1629,6 +1629,6 @@
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 30.206600000383332
+    "latency_ms": 31.086200004210696
   }
 ]
