@@ -1,0 +1,5 @@
+# Exclude raw HTML SEC filings and processed data from language statistics
+data/raw/* linguist-detectable=false
+data/processed/* linguist-detectable=false
+data/indexes/* linguist-detectable=false
+eval/results/* linguist-detectable=false
