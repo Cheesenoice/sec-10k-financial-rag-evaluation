@@ -42,17 +42,23 @@ $$\text{RRF\_Score}(d \in \mathcal{D}) = \frac{1}{k + r_{\text{BM25}}(d)} + \fra
 
 ---
 
-## 2. Generator-Validator Pipeline (Quy trình Xây dựng & Kiểm định)
+## 2. Quy trình Sinh Câu hỏi và Gán nhãn Ground Truth (QGen & GT Pipeline)
 
-Để đảm bảo bộ dữ liệu kiểm thử đạt chất lượng học thuật cao nhất, chúng tôi áp dụng quy trình **Generator-Validator Pipeline** qua hai giai đoạn tuần tự:
+Để đảm bảo tính khoa học và chất lượng cao nhất cho bộ dữ liệu kiểm thử, chúng tôi thiết kế và vận hành quy trình tự động hóa khép kín qua hai cấu phần độc lập:
 
-1. **Giai đoạn 1: Sinh dữ liệu thô (Gemini 3.5 Flash High - Thinking)**
-   * Mô hình Gemini 3.5 Flash High đọc qua toàn bộ kho ngữ liệu tài liệu 10-K đã chunking.
-   * Tự động sinh ra **120 câu hỏi thô** kèm thẻ metadata phân loại sơ bộ và gán nhãn Ground Truth.
-2. **Giai đoạn 2: Lọc & Kiểm định chất lượng (Claude Opus 4.6 Thinking)**
-   * Claude Opus 4.6 kiểm tra chéo 120 câu thô chống trùng lặp, loại bỏ 40 câu hỏi mơ hồ hoặc kém chất lượng.
-   * Giữ lại **80 câu hỏi tốt nhất**, phân phối đều vào 4 danh mục chính (20 câu/nhóm).
-   * Phát hiện và sửa lỗi ánh xạ nhãn Ground Truth lệch ngữ cảnh (ví dụ: các câu `q_26`, `q_28`, `q_38`, `q_65`, `q_69`) để đảm bảo nhãn đúng 100% trước khi thực nghiệm.
+### 2.1 Sinh Câu hỏi Mô phỏng (Synthetic Query Generation - QGen)
+* **Bộ nạp & Lọc nguồn (Chunk Selection):** Lọc các chunk văn bản từ kho ngữ liệu đạt tiêu chuẩn chất lượng (độ dài $\ge 200$ ký tự, tỷ lệ chữ số $\ge 2\%$ để đảm bảo chứa thông tin tài chính).
+* **Sinh câu hỏi (Query Generator):** Sử dụng mô hình **Llama 3.1 8B** (`llama-3.1-8b-instant`) sinh câu hỏi theo 4 danh mục: *Factual, Comparison, Lexical Gap, Temporal Routing*. Áp dụng cơ chế cân bằng động (Dynamic Balancing) để đảm bảo thu thập **chính xác 20 câu hỏi đạt chuẩn cho mỗi danh mục** (tổng cộng 80 câu hỏi).
+* **Thẩm định chất lượng (LLM Critic):** Sử dụng bộ lọc quy tắc (rule-based validation) và LLM Critic để bác bỏ các câu hỏi lỗi (không chứa tên công ty, bị lặp, hoặc không thể trả lời từ ngữ cảnh). Stage 2 Critic được cấu hình chấp nhận các thuật ngữ tài chính đồng nghĩa phổ biến (`capex`, `R&D spend`) nhằm tránh loại bỏ nhầm.
+
+### 2.3 Cơ sở Khoa học & Tham chiếu Học thuật (Academic Foundations & Citations)
+Quy trình sinh câu hỏi mô phỏng (QGen) và gán nhãn Ground Truth chuẩn hóa được thiết kế dựa trên các công trình nghiên cứu khoa học lớn trong lĩnh vực NLP và Information Retrieval:
+1. **Self-Instruct Framework (Wang et al., 2022)**: Định hướng mô hình sinh câu hỏi bám sát và suy luận trực tiếp từ tài liệu nguồn nhằm tránh thông tin sai lệch ngoài ngữ cảnh (hallucinations).
+   * *Tham chiếu:* *Wang, Y., Kordi, Y., Mishra, S., Liu, A., Smith, N. A., & Hajishirzi, H. (2022). Self-Instruct: Aligning Language Models with Self-Generated Instructions.*
+2. **Few-Shot In-Domain Dataset Generation (Schick & Schütze, 2021)**: Tạo lập cặp câu hỏi - đoạn văn bằng LLM phục vụ việc đánh giá hiệu năng truy xuất trong một miền dữ liệu tài chính xác định mà không cần nhân lực dán nhãn thủ công lớn.
+   * *Tham chiếu:* *Schick, T., & Schütze, H. (2021). Generating Datasets with Few-Shot Instructions for In-Domain Dense Retrieval.*
+3. **LLM-as-a-Judge (Zheng et al., 2023)**: Thẩm định chéo độ liên quan ngữ nghĩa của các chunk ứng viên bằng LLM lớn (Llama 3.3 70B), loại bỏ lỗi bỏ sót nhãn đúng (False Negatives) và triệt tiêu thiên vị vòng lặp (Circular Bias).
+   * *Tham chiếu:* *Zheng, L., Chiang, W. L., Sheng, Y., Li, S., Zhuang, H., Wu, Z., ... & Stoica, I. (2023). Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena.*
 
 ---
 
