@@ -25,7 +25,7 @@ NLP-project/
 │   └── api/                  # FastAPI backend server
 ├── app/                      # Giao diện ứng dụng
 │   └── streamlit_app.py      # Streamlit Frontend UI
-├── notebooks/                # Bộ tài liệu Jupyter Notebook minh họa toán học
+├── notebooks_vie/            # Bộ tài liệu Jupyter Notebook minh họa toán học (Tiếng Việt)
 │   ├── preprocessing/        # Demo parsing và chunking thô
 │   ├── baselines/            # Chạy thử nghiệm chi tiết các mức độ Baseline
 │   │   ├── 1_lexical/        # Demo toán học TF-IDF và Okapi BM25
@@ -156,6 +156,20 @@ venv\Scripts\python eval/scripts/run_evaluation.py
 
 - **Kết quả thô (JSON):** Tự động ghi đè tại `eval/results/`.
 - **Biểu đồ so sánh (PNG):** Tự động cập nhật tại `eval/figures/`.
+
+### Bảng Kết Quả Thực Nghiệm (Performance Summary)
+
+| Cấu hình | Recall@5 | MRR@5 | NDCG@5 | Thời gian phản hồi trung bình |
+| :--- | :---: | :---: | :---: | :---: |
+| **Config A (TF-IDF Baseline)** | 0.2875 | 0.2250 | 0.2258 | ~6.73 ms |
+| **Config B (BM25 Baseline)** | 0.4562 | 0.3602 | 0.3512 | ~24.70 ms |
+| **Config C (Dense HNSW Search)** | 0.5000 | 0.4158 | 0.3996 | ~46.14 ms |
+| **Config D (Hybrid - RRF)** | 0.5750 | 0.4227 | 0.4467 | ~76.29 ms |
+| **Config E (Enhanced RAG)** | **0.7719** | **0.6056** | **0.6184** | ~2002.80 ms (CPU)|
+
+Phân tích chi tiết và biểu đồ trực quan được lưu trữ tại:
+- **Báo cáo học thuật:** [ablation_report.md](file:///c:/Users/huynh/Desktop/NLP-project/eval/ablation_report.md)
+- **Jupyter Evaluation Notebook:** [4_ablation_study_evaluation.ipynb](file:///c:/Users/huynh/Desktop/NLP-project/notebooks_vie/eval/4_ablation_study_evaluation.ipynb)
 
 ---
 

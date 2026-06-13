@@ -118,17 +118,17 @@ Evaluation metrics computed at rank $K = 5$ over all 80 benchmark queries:
 
 | Configuration | Recall@5 | MRR@5 | NDCG@5 | Avg Latency |
 | :--- | :---: | :---: | :---: | :---: |
-| **Config A (TF-IDF Baseline)** | 0.0594 | 0.0519 | 0.0416 | 6.89 ms |
-| **Config B (BM25 Baseline)** | 0.1125 | 0.1540 | 0.1019 | 18.43 ms |
-| **Config C (Dense HNSW)** | 0.1844 | 0.1985 | 0.1519 | 57.69 ms |
-| **Config D (Hybrid - RRF)** | 0.1844 | **0.2431** | 0.1640 | 63.05 ms |
-| **Config E (Enhanced RAG)** | **0.2531** | 0.2350 | **0.1885** | 2289.89 ms (CPU) |
+| **Config A (TF-IDF Baseline)** | 0.2875 | 0.2250 | 0.2258 | 6.73 ms |
+| **Config B (BM25 Baseline)** | 0.4562 | 0.3602 | 0.3512 | 24.70 ms |
+| **Config C (Dense HNSW)** | 0.5000 | 0.4158 | 0.3996 | 46.14 ms |
+| **Config D (Hybrid - RRF)** | 0.5750 | 0.4227 | 0.4467 | 76.29 ms |
+| **Config E (Enhanced RAG)** | **0.7719** | **0.6056** | **0.6184** | 2002.80 ms (CPU) |
 
 ### Key Theoretical Findings:
-1. **BM25 vs. TF-IDF:** BM25 improves Recall@5 by **+89%** due to document length normalization and term frequency saturation.
-2. **Dense vs. Lexical:** Dense HNSW overcomes the *Lexical Gap* (e.g. matching "capex" to "capital expenditures"), scoring **0.1750** Recall vs **0.1000** for BM25.
-3. **Hybrid Fusion:** RRF (Config D) achieves the highest ranking order (MRR = **0.2431**), combining exact keyword matching with semantic vector space neighbors.
-4. **Enhanced RAG:** Config E gains the highest overall Recall (**0.2531**) and NDCG (**0.1885**). NLP Routing restricts the search space (filtering out irrelevant companies/years), eliminating cross-document noise.
+1. **BM25 vs. TF-IDF:** BM25 improves Recall@5 by **+58.68%** due to document length normalization and term frequency saturation.
+2. **Dense vs. Lexical:** Dense HNSW (Config C) achieves overall Recall@5 of **0.5000** (vs **0.4562** for BM25) due to vector space alignment of financial synonyms, overcoming the *Lexical Gap* without strict term matching.
+3. **Hybrid Fusion:** RRF (Config D) achieves **0.5750** Recall and **0.4227** MRR, combining lexical exact matches with semantic search candidates.
+4. **Enhanced RAG:** Config E gains the highest overall Recall (**0.7719**) and NDCG (**0.6184**). NLP Routing restricts the search space (filtering out irrelevant companies/years), eliminating cross-document noise.
 
 ---
 
@@ -150,8 +150,8 @@ NLP-project/
 │   ├── scripts/
 │   │   └── run_evaluation.py # Ablation study evaluation runner
 │   └── ablation_report.md    # Academic evaluation report
-├── notebooks/
-│   └── 4_ablation_study_evaluation.ipynb # Presentation Jupyter Notebook
+├── notebooks_en/             # Presentation Jupyter Notebook (English)
+├── notebooks_vie/            # Presentation Jupyter Notebook (Vietnamese)
 ├── src/
 │   ├── api/
 │   │   └── main.py           # FastAPI backend

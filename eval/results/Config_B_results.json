@@ -1,1634 +1,1554 @@
 [
   {
-    "query_id": "q_01",
+    "query_id": "sq_01",
     "category": "factual",
-    "query": "What was Apple's net sales in fiscal year 2024?",
-    "retrieved_ids": [
-      "AAPL_2024_10K_Item7_c000",
-      "AAPL_2023_10K_Item7_c000",
-      "AAPL_2024_10K_Item8_c003",
-      "NVDA_2024_10K_Item7_c010",
-      "AAPL_2023_10K_Item1A_c034"
-    ],
-    "gt_chunks": [
-      "AAPL_2024_10K_Item7_c001",
-      "AAPL_2024_10K_Item8_c006"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 54.36909999116324
-  },
-  {
-    "query_id": "q_02",
-    "category": "factual",
-    "query": "What was Microsoft's net income in fiscal year 2023?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item8_c025",
-      "MSFT_2022_10K_Item1_c007",
-      "MSFT_2022_10K_Item7_c005",
-      "NVDA_2023_10K_Item7_c010"
-    ],
-    "gt_chunks": [
-      "MSFT_2023_10K_Item8_c023",
-      "MSFT_2023_10K_Item7_c009"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 52.24689999886323
-  },
-  {
-    "query_id": "q_03",
-    "category": "factual",
-    "query": "What were Nvidia's research and development expense in fiscal year 2024?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item7_c007",
-      "NVDA_2024_10K_Item7_c010",
-      "NVDA_2024_10K_Item8_c030",
-      "NVDA_2024_10K_Item8_c017",
-      "MSFT_2023_10K_Item8_c024"
-    ],
-    "gt_chunks": [
-      "NVDA_2024_10K_Item7_c010",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.38685280723454163,
-    "latency_ms": 54.60500001208857
-  },
-  {
-    "query_id": "q_04",
-    "category": "factual",
-    "query": "What was Tesla's total revenues in fiscal year 2022?",
-    "retrieved_ids": [
-      "TSLA_2022_10K_Item8_c004",
-      "TSLA_2022_10K_Item8_c061",
-      "TSLA_2024_10K_Item8_c004",
-      "TSLA_2023_10K_Item8_c004",
-      "TSLA_2022_10K_Item8_c057"
-    ],
-    "gt_chunks": [
-      "TSLA_2022_10K_Item8_c034",
-      "TSLA_2022_10K_Item8_c061"
-    ],
-    "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.38685280723454163,
-    "latency_ms": 53.07330000505317
-  },
-  {
-    "query_id": "q_05",
-    "category": "factual",
-    "query": "What was Amazon's net income in fiscal year 2024?",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item7_c010",
-      "MSFT_2024_10K_Item8_c025",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item7_c007",
-      "NVDA_2024_10K_Item7_c009"
-    ],
-    "gt_chunks": [
-      "AMZN_2024_10K_Item8_c042",
-      "AMZN_2024_10K_Item8_c041"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 18.227699998533353
-  },
-  {
-    "query_id": "q_06",
-    "category": "factual",
-    "query": "What were Alphabet's capital expenditures in fiscal year 2023?",
-    "retrieved_ids": [
-      "NVDA_2023_10K_Item7_c012",
-      "NVDA_2022_10K_Item7_c013",
-      "NVDA_2023_10K_Item7_c011",
-      "AMZN_2024_10K_Item7_c005",
-      "MSFT_2022_10K_Item7_c013"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2023_10K_Item7_c012"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 9.935499998391606
-  },
-  {
-    "query_id": "q_07",
-    "category": "factual",
-    "query": "What was Apple's research and development expense in 2023?",
-    "retrieved_ids": [
-      "AAPL_2023_10K_Item7_c003",
-      "TSLA_2023_10K_Item7_c012",
-      "AAPL_2024_10K_Item7_c002",
-      "NVDA_2023_10K_Item7_c010",
-      "GOOGL_2023_10K_Item7_c011"
-    ],
-    "gt_chunks": [
-      "AAPL_2023_10K_Item7_c003",
-      "AAPL_2023_10K_Item8_c019"
-    ],
-    "recall": 0.5,
-    "mrr": 1.0,
-    "ndcg": 0.6131471927654584,
-    "latency_ms": 16.131399999721907
-  },
-  {
-    "query_id": "q_08",
-    "category": "factual",
-    "query": "What was Microsoft's operating income in 2024?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item8_c037",
-      "MSFT_2022_10K_Item1_c000",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2022_10K_Item1_c007",
-      "MSFT_2022_10K_Item1_c004"
-    ],
-    "gt_chunks": [
-      "MSFT_2024_10K_Item7_c005",
-      "MSFT_2024_10K_Item7_c006"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.48759998998139
-  },
-  {
-    "query_id": "q_09",
-    "category": "factual",
-    "query": "What was Tesla's capital expenditures in fiscal year 2023?",
-    "retrieved_ids": [
-      "NVDA_2023_10K_Item7_c012",
-      "NVDA_2023_10K_Item7_c011",
-      "NVDA_2022_10K_Item7_c013",
-      "NVDA_2023_10K_Item7_c010",
-      "TSLA_2023_10K_Item8_c049"
-    ],
-    "gt_chunks": [
-      "TSLA_2023_10K_Item7_c003",
-      "TSLA_2023_10K_Item8_c006"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.289999998756684
-  },
-  {
-    "query_id": "q_10",
-    "category": "factual",
-    "query": "What was Nvidia's net income in fiscal year 2022?",
-    "retrieved_ids": [
-      "NVDA_2022_10K_Item7_c004",
-      "NVDA_2023_10K_Item8_c006",
-      "NVDA_2023_10K_Item7_c002",
-      "NVDA_2022_10K_Item8_c006",
-      "NVDA_2024_10K_Item7_c004"
-    ],
-    "gt_chunks": [
-      "NVDA_2022_10K_Item8_c025",
-      "NVDA_2022_10K_Item8_c021"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 18.002500000875443
-  },
-  {
-    "query_id": "q_11",
-    "category": "factual",
-    "query": "What was Alphabet's net income in fiscal year 2024?",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item7_c010",
-      "MSFT_2024_10K_Item8_c025",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item7_c007",
-      "NVDA_2024_10K_Item7_c009"
-    ],
-    "gt_chunks": [
-      "GOOGL_2024_10K_Item7_c009",
-      "GOOGL_2024_10K_Item7_c008"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.166400003479794
-  },
-  {
-    "query_id": "q_12",
-    "category": "factual",
-    "query": "What were Amazon's technology and content expenses in 2022?",
-    "retrieved_ids": [
-      "AMZN_2022_10K_Item7_c011",
-      "AMZN_2023_10K_Item8_c032",
-      "AMZN_2022_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c009",
-      "AMZN_2022_10K_Item8_c010"
-    ],
-    "gt_chunks": [
-      "AMZN_2022_10K_Item7_c009",
-      "AMZN_2022_10K_Item8_c010"
-    ],
-    "recall": 0.5,
-    "mrr": 0.2,
-    "ndcg": 0.23719771276929622,
-    "latency_ms": 22.943699994357303
-  },
-  {
-    "query_id": "q_13",
-    "category": "factual",
-    "query": "What was Apple's operating income in 2024?",
-    "retrieved_ids": [
-      "AAPL_2023_10K_Item1A_c034",
-      "AAPL_2024_10K_Item8_c001",
-      "AAPL_2024_10K_Item8_c000",
-      "AAPL_2024_10K_Item8_c021",
-      "AAPL_2024_10K_Item8_c003"
-    ],
-    "gt_chunks": [
-      "AAPL_2024_10K_Item8_c018",
-      "AAPL_2024_10K_Item8_c014"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 18.745399996987544
-  },
-  {
-    "query_id": "q_14",
-    "category": "factual",
-    "query": "What were Nvidia's total assets in 2024?",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item8_c023",
-      "NVDA_2024_10K_Item8_c021",
-      "NVDA_2024_10K_Item8_c004",
-      "NVDA_2024_10K_Item8_c027",
-      "NVDA_2024_10K_Item8_c035"
-    ],
-    "gt_chunks": [
-      "NVDA_2024_10K_Item8_c024",
-      "NVDA_2024_10K_Item8_c033"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 20.898999995552003
-  },
-  {
-    "query_id": "q_15",
-    "category": "factual",
-    "query": "What was Microsoft's cash and cash equivalents in 2023?",
-    "retrieved_ids": [
-      "NVDA_2023_10K_Item7_c011",
-      "AMZN_2024_10K_Item8_c024",
-      "AMZN_2023_10K_Item8_c023",
-      "AMZN_2023_10K_Item8_c022",
-      "MSFT_2023_10K_Item8_c035"
-    ],
-    "gt_chunks": [
-      "MSFT_2023_10K_Item8_c019",
-      "MSFT_2023_10K_Item8_c027"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 8.586800002376549
-  },
-  {
-    "query_id": "q_16",
-    "category": "factual",
-    "query": "What was Google's total revenue in 2022?",
-    "retrieved_ids": [
-      "GOOGL_2022_10K_Item8_c018",
-      "GOOGL_2022_10K_Item7_c012",
-      "GOOGL_2023_10K_Item7_c008",
-      "GOOGL_2023_10K_Item7_c012",
-      "GOOGL_2024_10K_Item7_c010"
-    ],
-    "gt_chunks": [
-      "GOOGL_2022_10K_Item8_c009",
-      "GOOGL_2022_10K_Item7_c009"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 9.884099999908358
-  },
-  {
-    "query_id": "q_17",
-    "category": "factual",
-    "query": "What were Tesla's cash flows from operating activities in 2024?",
-    "retrieved_ids": [
-      "TSLA_2024_10K_Item8_c006",
-      "TSLA_2024_10K_Item7_c016",
-      "TSLA_2023_10K_Item8_c006",
-      "TSLA_2022_10K_Item8_c005",
-      "AMZN_2024_10K_Item7_c005"
-    ],
-    "gt_chunks": [
-      "TSLA_2024_10K_Item8_c018",
-      "TSLA_2024_10K_Item7_c016"
-    ],
-    "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.38685280723454163,
-    "latency_ms": 24.023300007684156
-  },
-  {
-    "query_id": "q_18",
-    "category": "factual",
-    "query": "What was Amazon's operating income in 2023?",
+    "query": "What was the consolidated operating income for Amazon in 2023?",
     "retrieved_ids": [
       "AMZN_2023_10K_Item8_c031",
       "AMZN_2022_10K_Item8_c030",
+      "AMZN_2023_10K_Item8_c018",
       "AMZN_2023_10K_Item8_c032",
-      "AMZN_2023_10K_Item8_c033",
       "AMZN_2022_10K_Item8_c032"
     ],
     "gt_chunks": [
       "AMZN_2023_10K_Item7_c008",
-      "AMZN_2023_10K_Item8_c043"
+      "AMZN_2023_10K_Item8_c042"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 5.1131000072928146
+    "latency_ms": 85.1533000022755
   },
   {
-    "query_id": "q_19",
+    "query_id": "sq_02",
     "category": "factual",
-    "query": "What were Google's research and development expenses in 2023?",
+    "query": "What was Amazons (AMZN) cost of sales in 2023?",
     "retrieved_ids": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c010",
-      "GOOGL_2022_10K_Item7_c011",
-      "GOOGL_2024_10K_Item8_c042",
-      "GOOGL_2023_10K_Item8_c044"
+      "AAPL_2023_10K_Item1A_c019",
+      "AAPL_2023_10K_Item1A_c034",
+      "TSLA_2023_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c009",
+      "AAPL_2022_10K_Item1A_c021"
     ],
     "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2023_10K_Item7_c012"
-    ],
-    "recall": 0.5,
-    "mrr": 1.0,
-    "ndcg": 0.6131471927654584,
-    "latency_ms": 26.340399999753572
-  },
-  {
-    "query_id": "q_20",
-    "category": "factual",
-    "query": "What was Nvidia's gross profit in 2024?",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item7_c009",
-      "TSLA_2024_10K_Item8_c053",
-      "NVDA_2022_10K_Item7_c010",
-      "NVDA_2023_10K_Item7_c008",
-      "TSLA_2024_10K_Item7_c010"
-    ],
-    "gt_chunks": [
-      "NVDA_2024_10K_Item7_c009",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.5,
-    "mrr": 1.0,
-    "ndcg": 0.6131471927654584,
-    "latency_ms": 5.495999997947365
-  },
-  {
-    "query_id": "q_21",
-    "category": "comparison",
-    "query": "Compare Apple and Microsoft net income in 2024.",
-    "retrieved_ids": [
-      "AAPL_2024_10K_Item8_c001",
-      "AAPL_2024_10K_Item8_c003",
-      "AAPL_2024_10K_Item8_c000",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item8_c037"
-    ],
-    "gt_chunks": [
-      "AAPL_2024_10K_Item8_c018",
-      "AAPL_2024_10K_Item8_c001",
-      "MSFT_2024_10K_Item7_c005",
-      "MSFT_2024_10K_Item7_c004"
-    ],
-    "recall": 0.25,
-    "mrr": 1.0,
-    "ndcg": 0.3903800499921017,
-    "latency_ms": 15.471799997612834
-  },
-  {
-    "query_id": "q_22",
-    "category": "comparison",
-    "query": "Compare Amazon and Google total revenues in 2023.",
-    "retrieved_ids": [
-      "GOOGL_2023_10K_Item7_c008",
-      "GOOGL_2023_10K_Item8_c018",
-      "GOOGL_2024_10K_Item7_c003",
-      "GOOGL_2024_10K_Item7_c008",
-      "GOOGL_2023_10K_Item8_c044"
-    ],
-    "gt_chunks": [
-      "AMZN_2023_10K_Item8_c043",
-      "AMZN_2023_10K_Item7_c008",
-      "GOOGL_2023_10K_Item7_c010",
-      "GOOGL_2023_10K_Item7_c009"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 11.56680000713095
-  },
-  {
-    "query_id": "q_23",
-    "category": "comparison",
-    "query": "How did Tesla and Nvidia research and development expenses differ in 2024?",
-    "retrieved_ids": [
-      "TSLA_2024_10K_Item8_c049",
-      "TSLA_2024_10K_Item8_c050",
-      "TSLA_2024_10K_Item8_c045",
-      "NVDA_2024_10K_Item7_c003",
-      "NVDA_2024_10K_Item8_c027"
-    ],
-    "gt_chunks": [
-      "TSLA_2024_10K_Item7_c012",
-      "TSLA_2024_10K_Item7_c013",
-      "NVDA_2024_10K_Item7_c010",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 15.60859999153763
-  },
-  {
-    "query_id": "q_24",
-    "category": "comparison",
-    "query": "Compare Apple net sales between fiscal year 2023 and 2024.",
-    "retrieved_ids": [
-      "AAPL_2024_10K_Item7_c000",
-      "AAPL_2023_10K_Item7_c000",
-      "AAPL_2022_10K_Item7_c000",
-      "AAPL_2024_10K_Item8_c003",
-      "MSFT_2024_10K_Item7_c007"
-    ],
-    "gt_chunks": [
-      "AAPL_2023_10K_Item7_c001",
-      "AAPL_2023_10K_Item7_c002",
-      "AAPL_2024_10K_Item7_c001",
-      "AAPL_2024_10K_Item8_c006"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 18.544199992902577
-  },
-  {
-    "query_id": "q_25",
-    "category": "comparison",
-    "query": "Compare Nvidia net income between fiscal year 2023 and 2024.",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item8_c016",
-      "NVDA_2024_10K_Item7_c004",
-      "NVDA_2023_10K_Item8_c017",
-      "NVDA_2024_10K_Item8_c036",
-      "NVDA_2024_10K_Item8_c020"
-    ],
-    "gt_chunks": [
-      "NVDA_2023_10K_Item8_c021",
-      "NVDA_2023_10K_Item8_c022",
-      "NVDA_2024_10K_Item8_c020",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.25,
-    "mrr": 0.2,
-    "ndcg": 0.15101961822780524,
-    "latency_ms": 14.060799992876127
-  },
-  {
-    "query_id": "q_26",
-    "category": "comparison",
-    "query": "How did Microsoft capital expenditures compare in 2022 vs 2023?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item7_c002",
-      "NVDA_2022_10K_Item7_c013",
-      "MSFT_2023_10K_Item7_c015",
-      "AMZN_2023_10K_Item7_c005",
-      "AMZN_2024_10K_Item7_c005"
-    ],
-    "gt_chunks": [
-      "MSFT_2022_10K_Item7_c014",
-      "MSFT_2022_10K_Item7_c012",
-      "MSFT_2023_10K_Item7_c015",
-      "MSFT_2023_10K_Item7_c013"
-    ],
-    "recall": 0.25,
-    "mrr": 0.3333333333333333,
-    "ndcg": 0.19519002499605084,
-    "latency_ms": 15.756799999508075
-  },
-  {
-    "query_id": "q_27",
-    "category": "comparison",
-    "query": "Compare Alphabet and Microsoft operating income in 2024.",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item8_c037",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item8_c036",
-      "MSFT_2024_10K_Item7_c005",
-      "MSFT_2024_10K_Item8_c025"
-    ],
-    "gt_chunks": [
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c015",
-      "MSFT_2024_10K_Item7_c005",
-      "MSFT_2024_10K_Item7_c006"
-    ],
-    "recall": 0.25,
-    "mrr": 0.25,
-    "ndcg": 0.16812753627111746,
-    "latency_ms": 15.066600011778064
-  },
-  {
-    "query_id": "q_28",
-    "category": "comparison",
-    "query": "Compare Amazon and Apple capital expenditures in 2024.",
-    "retrieved_ids": [
-      "AMZN_2024_10K_Item7_c005",
-      "AMZN_2024_10K_Item8_c031",
-      "GOOGL_2024_10K_Item7_c014",
-      "AAPL_2024_10K_Item8_c001",
-      "AMZN_2024_10K_Item8_c032"
-    ],
-    "gt_chunks": [
-      "AMZN_2024_10K_Item8_c043",
-      "AAPL_2024_10K_Item8_c003"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 17.25409999198746
-  },
-  {
-    "query_id": "q_29",
-    "category": "comparison",
-    "query": "Compare Tesla net income in 2023 and 2024.",
-    "retrieved_ids": [
-      "TSLA_2024_10K_Item8_c050",
-      "TSLA_2024_10K_Item8_c049",
-      "TSLA_2024_10K_Item8_c046",
-      "TSLA_2024_10K_Item8_c048",
-      "TSLA_2024_10K_Item8_c047"
-    ],
-    "gt_chunks": [
-      "TSLA_2023_10K_Item8_c019",
-      "TSLA_2023_10K_Item8_c031",
-      "TSLA_2024_10K_Item8_c018",
-      "TSLA_2024_10K_Item8_c029"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 13.88779999979306
-  },
-  {
-    "query_id": "q_30",
-    "category": "comparison",
-    "query": "How does Google's cash from operations compare with Microsoft in 2023?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item7_c002",
-      "GOOGL_2022_10K_Item7_c003",
-      "GOOGL_2024_10K_Item7_c003",
-      "GOOGL_2023_10K_Item7_c003",
-      "MSFT_2022_10K_Item1_c003"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2023_10K_Item7_c012",
-      "MSFT_2023_10K_Item8_c027",
-      "MSFT_2023_10K_Item8_c032"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 21.723700003349222
-  },
-  {
-    "query_id": "q_31",
-    "category": "comparison",
-    "query": "Compare Nvidia and Intel or AMD semiconductor competitors net income in 2024.",
-    "retrieved_ids": [
-      "NVDA_2022_10K_Item1A_c002",
-      "NVDA_2024_10K_Item1A_c058",
-      "NVDA_2024_10K_Item1A_c053",
-      "NVDA_2024_10K_Item1A_c005",
-      "NVDA_2023_10K_Item1A_c005"
-    ],
-    "gt_chunks": [
-      "NVDA_2024_10K_Item8_c020",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 17.89190000272356
-  },
-  {
-    "query_id": "q_32",
-    "category": "comparison",
-    "query": "Compare Amazon technology expenses between 2022 and 2023.",
-    "retrieved_ids": [
-      "AMZN_2023_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c032",
-      "AMZN_2022_10K_Item8_c030",
-      "AMZN_2023_10K_Item8_c017"
-    ],
-    "gt_chunks": [
-      "AMZN_2022_10K_Item7_c009",
-      "AMZN_2022_10K_Item8_c010",
-      "AMZN_2023_10K_Item8_c043",
       "AMZN_2023_10K_Item7_c009"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 17.111900000600144
+    "latency_ms": 76.0253999978886
   },
   {
-    "query_id": "q_33",
-    "category": "comparison",
-    "query": "Compare Microsoft research and development expense between 2023 and 2024.",
+    "query_id": "sq_03",
+    "category": "factual",
+    "query": "What were the total operating expenses of Amazon in 2022?",
     "retrieved_ids": [
-      "MSFT_2022_10K_Item1_c020",
-      "AMZN_2022_10K_Item8_c025",
-      "MSFT_2023_10K_Item8_c027",
-      "MSFT_2023_10K_Item7_c008",
-      "MSFT_2023_10K_Item8_c024"
+      "AMZN_2023_10K_Item8_c032",
+      "AMZN_2022_10K_Item8_c031",
+      "AMZN_2023_10K_Item8_c020",
+      "AMZN_2022_10K_Item8_c030",
+      "AMZN_2024_10K_Item8_c032"
     ],
     "gt_chunks": [
-      "MSFT_2023_10K_Item7_c008",
-      "MSFT_2023_10K_Item8_c032",
-      "MSFT_2024_10K_Item7_c006",
-      "MSFT_2024_10K_Item8_c018"
-    ],
-    "recall": 0.25,
-    "mrr": 0.25,
-    "ndcg": 0.16812753627111746,
-    "latency_ms": 17.457100009778515
-  },
-  {
-    "query_id": "q_34",
-    "category": "comparison",
-    "query": "Compare Google capital expenditures between 2023 and 2024.",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item7_c013",
-      "GOOGL_2023_10K_Item7_c014",
-      "GOOGL_2024_10K_Item7_c007",
-      "AMZN_2024_10K_Item7_c005",
-      "GOOGL_2024_10K_Item7_c014"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2023_10K_Item7_c012",
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c015"
+      "AMZN_2022_10K_Item7_c009"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 15.831999990041368
+    "latency_ms": 86.05510000052163
   },
   {
-    "query_id": "q_35",
-    "category": "comparison",
-    "query": "Compare Apple net sales of products vs services in 2024.",
+    "query_id": "sq_04",
+    "category": "factual",
+    "query": "What was the total cost of revenues for Alphabet Inc. in the year 2023?",
     "retrieved_ids": [
-      "AAPL_2024_10K_Item7_c001",
-      "AAPL_2024_10K_Item8_c006",
-      "AAPL_2024_10K_Item8_c000",
-      "AAPL_2024_10K_Item8_c003",
-      "AAPL_2022_10K_Item7_c001"
+      "GOOGL_2023_10K_Item7_c010",
+      "GOOGL_2024_10K_Item7_c010",
+      "GOOGL_2023_10K_Item7_c007",
+      "GOOGL_2024_10K_Item7_c007",
+      "GOOGL_2023_10K_Item8_c044"
     ],
     "gt_chunks": [
-      "AAPL_2024_10K_Item7_c001",
-      "AAPL_2024_10K_Item1A_c009"
+      "GOOGL_2023_10K_Item7_c012"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 89.36459999677027
+  },
+  {
+    "query_id": "sq_05",
+    "category": "factual",
+    "query": "What was the increase in Energy generation and storage revenue for TSLA in the year ended December 31, 2024 compared to the year ended December 31, 2023?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item7_c009",
+      "TSLA_2023_10K_Item7_c011",
+      "TSLA_2024_10K_Item7_c012",
+      "TSLA_2023_10K_Item7_c009",
+      "TSLA_2024_10K_Item7_c011"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item7_c010",
+      "TSLA_2024_10K_Item7_c009"
     ],
     "recall": 0.5,
     "mrr": 1.0,
     "ndcg": 0.6131471927654584,
-    "latency_ms": 16.345199997886084
+    "latency_ms": 47.042999998666346
   },
   {
-    "query_id": "q_36",
-    "category": "comparison",
-    "query": "How did Tesla automotive sales revenue change from 2022 to 2023?",
+    "query_id": "sq_06",
+    "category": "factual",
+    "query": "What were the sales and marketing expenses for MSFT in fiscal year 2023?",
     "retrieved_ids": [
-      "TSLA_2023_10K_Item8_c011",
-      "TSLA_2022_10K_Item8_c011",
-      "TSLA_2023_10K_Item7_c010",
-      "TSLA_2023_10K_Item7_c011",
-      "TSLA_2024_10K_Item8_c011"
+      "MSFT_2024_10K_Item7_c007",
+      "MSFT_2023_10K_Item7_c008",
+      "MSFT_2023_10K_Item8_c009",
+      "GOOGL_2024_10K_Item7_c011",
+      "AMZN_2023_10K_Item7_c011"
     ],
     "gt_chunks": [
-      "TSLA_2022_10K_Item8_c032",
-      "TSLA_2022_10K_Item8_c034",
-      "TSLA_2023_10K_Item8_c031",
-      "TSLA_2023_10K_Item8_c044"
+      "MSFT_2023_10K_Item7_c008"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 26.30209999915678
+  },
+  {
+    "query_id": "sq_07",
+    "category": "factual",
+    "query": "What was the amount of research and development expenses in 2024 for MSFT?",
+    "retrieved_ids": [
+      "AAPL_2024_10K_Item7_c002",
+      "TSLA_2024_10K_Item8_c043",
+      "NVDA_2024_10K_Item7_c010",
+      "GOOGL_2024_10K_Item7_c010",
+      "NVDA_2022_10K_Item7_c011"
+    ],
+    "gt_chunks": [
+      "MSFT_2024_10K_Item7_c007"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 24.25550000043586
+    "latency_ms": 25.97789999708766
   },
   {
-    "query_id": "q_37",
-    "category": "comparison",
-    "query": "Compare Apple and Alphabet research and development spending in 2024.",
+    "query_id": "sq_08",
+    "category": "factual",
+    "query": "In fiscal year 2022, what was the increase in Microsoft 365 Consumer subscription revenue?",
     "retrieved_ids": [
-      "AAPL_2024_10K_Item8_c011",
-      "GOOGL_2024_10K_Item7_c010",
-      "GOOGL_2024_10K_Item7_c008",
-      "AAPL_2024_10K_Item7_c002",
-      "AMZN_2022_10K_Item7_c011"
+      "MSFT_2022_10K_Item7_c005",
+      "MSFT_2024_10K_Item7_c003",
+      "MSFT_2022_10K_Item7_c006",
+      "MSFT_2022_10K_Item7_c003",
+      "MSFT_2024_10K_Item7_c002"
     ],
     "gt_chunks": [
-      "AAPL_2024_10K_Item7_c002",
-      "AAPL_2024_10K_Item8_c016",
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c010"
+      "MSFT_2022_10K_Item7_c006",
+      "MSFT_2022_10K_Item7_c005"
     ],
-    "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.4144299250118475,
-    "latency_ms": 18.089400007738732
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.9197207891481876,
+    "latency_ms": 29.387700000370387
   },
   {
-    "query_id": "q_38",
-    "category": "comparison",
-    "query": "Compare Amazon net income between 2023 and 2024.",
+    "query_id": "sq_09",
+    "category": "factual",
+    "query": "What were Apples net sales in the Americas for 2023?",
     "retrieved_ids": [
-      "AMZN_2024_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c032",
-      "AMZN_2024_10K_Item8_c018",
-      "AMZN_2023_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c017"
+      "AAPL_2023_10K_Item7_c001",
+      "AAPL_2024_10K_Item7_c000",
+      "AAPL_2023_10K_Item8_c019",
+      "AAPL_2022_10K_Item7_c002",
+      "AAPL_2022_10K_Item8_c024"
     ],
     "gt_chunks": [
-      "AMZN_2023_10K_Item8_c004",
+      "AAPL_2023_10K_Item7_c001"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 17.19750000484055
+  },
+  {
+    "query_id": "sq_10",
+    "category": "factual",
+    "query": "What was the net income for Amazon in fiscal year 2024?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item7_c010",
+      "MSFT_2024_10K_Item7_c008",
+      "MSFT_2024_10K_Item8_c025",
+      "NVDA_2024_10K_Item7_c009",
+      "NVDA_2024_10K_Item7_c004"
+    ],
+    "gt_chunks": [
       "AMZN_2024_10K_Item8_c004"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 14.061499998206273
+    "latency_ms": 18.69030000671046
   },
   {
-    "query_id": "q_39",
-    "category": "comparison",
-    "query": "Compare Nvidia gross margin percentage in 2023 vs 2024.",
+    "query_id": "sq_11",
+    "category": "factual",
+    "query": "For the fiscal year 2022, what was the total net sales of Apples iPad products?",
     "retrieved_ids": [
+      "AAPL_2022_10K_Item8_c004",
+      "AAPL_2023_10K_Item7_c002",
       "AAPL_2024_10K_Item7_c001",
-      "MSFT_2024_10K_Item7_c005",
-      "AAPL_2022_10K_Item7_c003",
-      "AAPL_2024_10K_Item7_c002",
-      "MSFT_2024_10K_Item7_c006"
-    ],
-    "gt_chunks": [
-      "NVDA_2023_10K_Item7_c008",
-      "NVDA_2023_10K_Item7_c009",
-      "NVDA_2024_10K_Item7_c009",
-      "NVDA_2024_10K_Item8_c025"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 10.752899994258769
-  },
-  {
-    "query_id": "q_40",
-    "category": "comparison",
-    "query": "Compare Google total assets in 2023 vs 2024.",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item8_c043",
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c007",
-      "GOOGL_2023_10K_Item8_c044",
-      "GOOGL_2024_10K_Item7_c010"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2023_10K_Item7_c012",
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c015"
-    ],
-    "recall": 0.25,
-    "mrr": 0.5,
-    "ndcg": 0.24630238874073,
-    "latency_ms": 11.105200013844296
-  },
-  {
-    "query_id": "q_41",
-    "category": "lexical_gap",
-    "query": "What was Amazon capex in fiscal year 2023?",
-    "retrieved_ids": [
-      "AMZN_2023_10K_Item8_c031",
-      "AMZN_2022_10K_Item8_c030",
-      "NVDA_2023_10K_Item7_c010",
-      "NVDA_2023_10K_Item7_c009",
-      "AMZN_2023_10K_Item8_c032"
-    ],
-    "gt_chunks": [
-      "AMZN_2023_10K_Item7_c005",
-      "AMZN_2023_10K_Item7_c001"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.35659999656491
-  },
-  {
-    "query_id": "q_42",
-    "category": "lexical_gap",
-    "query": "What were Apple's capital spending in 2024?",
-    "retrieved_ids": [
-      "AAPL_2023_10K_Item1A_c034",
-      "AAPL_2024_10K_Item8_c001",
-      "AMZN_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c008",
-      "AAPL_2024_10K_Item7_c002"
-    ],
-    "gt_chunks": [
-      "AAPL_2024_10K_Item8_c000",
-      "AAPL_2024_10K_Item8_c001"
-    ],
-    "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.38685280723454163,
-    "latency_ms": 8.953799988375977
-  },
-  {
-    "query_id": "q_43",
-    "category": "lexical_gap",
-    "query": "What were Microsoft's net earnings in fiscal year 2024?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item8_c025",
-      "MSFT_2022_10K_Item1_c007",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2022_10K_Item7_c004",
-      "MSFT_2024_10K_Item7_c004"
-    ],
-    "gt_chunks": [
-      "MSFT_2024_10K_Item7_c005",
-      "MSFT_2024_10K_Item8_c014"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 15.4575000051409
-  },
-  {
-    "query_id": "q_44",
-    "category": "lexical_gap",
-    "query": "What was Google's net profit in fiscal year 2023?",
-    "retrieved_ids": [
-      "NVDA_2023_10K_Item7_c009",
-      "NVDA_2023_10K_Item7_c008",
-      "NVDA_2024_10K_Item7_c009",
-      "NVDA_2022_10K_Item7_c010",
-      "NVDA_2024_10K_Item7_c011"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item8_c038",
-      "GOOGL_2023_10K_Item7_c011"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.313900006120093
-  },
-  {
-    "query_id": "q_45",
-    "category": "lexical_gap",
-    "query": "What was Nvidia's net profit in fiscal year 2024?",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item7_c009",
-      "NVDA_2024_10K_Item7_c004",
-      "NVDA_2023_10K_Item7_c008",
-      "NVDA_2022_10K_Item7_c010",
-      "NVDA_2024_10K_Item7_c005"
-    ],
-    "gt_chunks": [
-      "NVDA_2024_10K_Item8_c020",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.052599995513447
-  },
-  {
-    "query_id": "q_46",
-    "category": "lexical_gap",
-    "query": "What was Tesla's net profit in fiscal year 2023?",
-    "retrieved_ids": [
-      "NVDA_2023_10K_Item7_c009",
-      "NVDA_2023_10K_Item7_c008",
-      "NVDA_2024_10K_Item7_c009",
-      "NVDA_2022_10K_Item7_c010",
-      "NVDA_2024_10K_Item7_c011"
-    ],
-    "gt_chunks": [
-      "TSLA_2023_10K_Item8_c019",
-      "TSLA_2023_10K_Item8_c031"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 15.470400001504458
-  },
-  {
-    "query_id": "q_47",
-    "category": "lexical_gap",
-    "query": "What was Google's operating earnings in 2024?",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item7_c007",
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c008",
-      "GOOGL_2024_10K_Item7_c000",
-      "GOOGL_2024_10K_Item7_c010"
-    ],
-    "gt_chunks": [
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item7_c015"
-    ],
-    "recall": 0.5,
-    "mrr": 0.5,
-    "ndcg": 0.38685280723454163,
-    "latency_ms": 11.79960000445135
-  },
-  {
-    "query_id": "q_48",
-    "category": "lexical_gap",
-    "query": "What was Apple's total turnover in 2023?",
-    "retrieved_ids": [
-      "AAPL_2023_10K_Item1A_c034",
-      "AAPL_2023_10K_Item8_c001",
-      "AAPL_2023_10K_Item8_c021",
-      "AAPL_2024_10K_Item8_c006",
-      "AAPL_2023_10K_Item8_c022"
-    ],
-    "gt_chunks": [
-      "AAPL_2023_10K_Item7_c001",
-      "AAPL_2023_10K_Item7_c002"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 11.341300007188693
-  },
-  {
-    "query_id": "q_49",
-    "category": "lexical_gap",
-    "query": "What was Microsoft's turnover in 2024?",
-    "retrieved_ids": [
-      "MSFT_2022_10K_Item1_c000",
-      "MSFT_2022_10K_Item1_c007",
-      "MSFT_2024_10K_Item8_c037",
-      "MSFT_2022_10K_Item1_c004",
-      "AAPL_2023_10K_Item1A_c034"
-    ],
-    "gt_chunks": [
-      "MSFT_2024_10K_Item7_c006",
-      "MSFT_2024_10K_Item7_c003"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 7.943200005684048
-  },
-  {
-    "query_id": "q_50",
-    "category": "lexical_gap",
-    "query": "What was Amazon's total revenue in 2024?",
-    "retrieved_ids": [
-      "AMZN_2024_10K_Item8_c021",
-      "AMZN_2024_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c032",
-      "AMZN_2024_10K_Item8_c018",
+      "AAPL_2023_10K_Item7_c000",
       "AAPL_2024_10K_Item8_c006"
     ],
     "gt_chunks": [
-      "AMZN_2024_10K_Item8_c042",
-      "AMZN_2024_10K_Item7_c008"
+      "AAPL_2022_10K_Item7_c001",
+      "AAPL_2022_10K_Item8_c009"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 9.574800002155825
+    "latency_ms": 31.670399999711663
   },
   {
-    "query_id": "q_51",
-    "category": "lexical_gap",
-    "query": "What was Tesla's capex in fiscal year 2024?",
+    "query_id": "sq_12",
+    "category": "factual",
+    "query": "What was the total cost of revenues for GOOGL for the year ended December 31, 2022?",
     "retrieved_ids": [
-      "TSLA_2024_10K_Item8_c049",
-      "TSLA_2024_10K_Item8_c050",
-      "TSLA_2024_10K_Item8_c046",
-      "TSLA_2024_10K_Item8_c047",
-      "NVDA_2024_10K_Item7_c004"
+      "TSLA_2023_10K_Item7_c010",
+      "TSLA_2024_10K_Item8_c053",
+      "GOOGL_2023_10K_Item7_c010",
+      "GOOGL_2023_10K_Item7_c007",
+      "TSLA_2024_10K_Item8_c041"
     ],
     "gt_chunks": [
-      "TSLA_2024_10K_Item7_c003",
-      "TSLA_2024_10K_Item7_c016"
+      "GOOGL_2022_10K_Item7_c011"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 10.13480000256095
+    "latency_ms": 24.59959999396233
   },
   {
-    "query_id": "q_52",
-    "category": "lexical_gap",
-    "query": "What was Nvidia's capex in fiscal year 2024?",
+    "query_id": "sq_13",
+    "category": "factual",
+    "query": "What were the shipping costs for Amazon in 2024?",
     "retrieved_ids": [
+      "AMZN_2024_10K_Item7_c008",
+      "AMZN_2024_10K_Item8_c009",
+      "AMZN_2024_10K_Item8_c032",
+      "AMZN_2023_10K_Item7_c008",
+      "AMZN_2024_10K_Item8_c010"
+    ],
+    "gt_chunks": [
+      "AMZN_2024_10K_Item7_c009"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 15.2066999944509
+  },
+  {
+    "query_id": "sq_14",
+    "category": "factual",
+    "query": "What was the increase in automotive leasing revenue for Tesla in the year ended December 31, 2023 compared to the year ended December 31, 2022?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c009",
+      "TSLA_2023_10K_Item7_c011",
+      "TSLA_2024_10K_Item7_c009",
+      "TSLA_2022_10K_Item8_c011",
+      "TSLA_2023_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c009",
+      "TSLA_2023_10K_Item8_c011"
+    ],
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 0.6131471927654584,
+    "latency_ms": 48.21819999779109
+  },
+  {
+    "query_id": "sq_15",
+    "category": "factual",
+    "query": "What was Microsofts revenue in fiscal year 2023?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c009",
+      "NVDA_2023_10K_Item7_c002",
       "NVDA_2024_10K_Item7_c004",
-      "NVDA_2024_10K_Item7_c005",
       "NVDA_2023_10K_Item7_c003",
-      "NVDA_2024_10K_Item8_c035",
       "NVDA_2024_10K_Item7_c009"
     ],
     "gt_chunks": [
-      "NVDA_2024_10K_Item8_c000",
-      "NVDA_2024_10K_Item8_c001"
+      "MSFT_2023_10K_Item7_c005"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 13.048700013314374
+    "latency_ms": 17.44880000478588
   },
   {
-    "query_id": "q_53",
-    "category": "lexical_gap",
-    "query": "What were Google's capital spending in 2024?",
+    "query_id": "sq_16",
+    "category": "factual",
+    "query": "What was Apple Inc.s total gross margin for 2024?",
     "retrieved_ids": [
+      "AAPL_2024_10K_Item7_c001",
+      "AAPL_2024_10K_Item7_c002",
+      "AAPL_2022_10K_Item7_c003",
+      "AAPL_2023_10K_Item7_c002",
+      "AAPL_2023_10K_Item7_c003"
+    ],
+    "gt_chunks": [
+      "AAPL_2024_10K_Item8_c000"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 9.613399997761007
+  },
+  {
+    "query_id": "sq_17",
+    "category": "factual",
+    "query": "What was the increase in Microsofts Research and development expenses in fiscal year 2022?",
+    "retrieved_ids": [
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c009",
+      "NVDA_2023_10K_Item7_c010",
+      "MSFT_2023_10K_Item8_c024",
+      "GOOGL_2022_10K_Item7_c011"
+    ],
+    "gt_chunks": [
+      "MSFT_2022_10K_Item7_c007",
+      "MSFT_2022_10K_Item7_c005"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 22.13560000382131
+  },
+  {
+    "query_id": "sq_18",
+    "category": "factual",
+    "query": "What were Apples net sales from iPhone products in 2023?",
+    "retrieved_ids": [
+      "AAPL_2024_10K_Item7_c001",
+      "AAPL_2023_10K_Item7_c002",
+      "AAPL_2022_10K_Item8_c004",
+      "AAPL_2024_10K_Item8_c006",
+      "AAPL_2023_10K_Item7_c000"
+    ],
+    "gt_chunks": [
+      "AAPL_2023_10K_Item8_c006",
+      "AAPL_2023_10K_Item7_c002"
+    ],
+    "recall": 0.5,
+    "mrr": 0.5,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 15.269900002749637
+  },
+  {
+    "query_id": "sq_19",
+    "category": "factual",
+    "query": "What were Apple Inc.s net sales of Services in 2023?",
+    "retrieved_ids": [
+      "AAPL_2023_10K_Item1A_c034",
+      "AAPL_2024_10K_Item7_c001",
+      "AAPL_2023_10K_Item7_c002",
+      "AAPL_2024_10K_Item8_c006",
+      "AAPL_2023_10K_Item8_c006"
+    ],
+    "gt_chunks": [
+      "AAPL_2023_10K_Item8_c006",
+      "AAPL_2023_10K_Item7_c002"
+    ],
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "ndcg": 0.5437713091520254,
+    "latency_ms": 20.20329999504611
+  },
+  {
+    "query_id": "sq_20",
+    "category": "factual",
+    "query": "What was the total revenue for Google Services for the fiscal year 2022?",
+    "retrieved_ids": [
+      "GOOGL_2022_10K_Item8_c018",
+      "NVDA_2022_10K_Item7_c010",
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2023_10K_Item7_c009",
+      "GOOGL_2024_10K_Item8_c018"
+    ],
+    "gt_chunks": [
+      "GOOGL_2022_10K_Item8_c018",
+      "GOOGL_2022_10K_Item8_c043"
+    ],
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 0.6131471927654584,
+    "latency_ms": 20.199400001729373
+  },
+  {
+    "query_id": "sq_21",
+    "category": "comparison",
+    "query": "How did Total automotive revenues for TSLA change from fiscal year 2023 to fiscal year 2024?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item7_c004",
+      "MSFT_2024_10K_Item7_c002",
+      "NVDA_2023_10K_Item7_c008",
+      "TSLA_2024_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item7_c010",
+      "TSLA_2023_10K_Item7_c010"
+    ],
+    "recall": 0.5,
+    "mrr": 0.25,
+    "ndcg": 0.2640681225725909,
+    "latency_ms": 30.948300001909956
+  },
+  {
+    "query_id": "sq_22",
+    "category": "comparison",
+    "query": "What was the amount of manufacturing credits earned by TSLA for the years ended December 31, 2024 and 2023, respectively?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c011",
+      "TSLA_2024_10K_Item8_c042",
+      "TSLA_2024_10K_Item7_c012",
+      "TSLA_2023_10K_Item7_c012",
+      "TSLA_2024_10K_Item8_c014"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item8_c042"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 36.244700000679586
+  },
+  {
+    "query_id": "sq_23",
+    "category": "comparison",
+    "query": "What was the percentage change in deliveries of Teslas automotive sales from 2022 to 2023?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c011",
+      "TSLA_2023_10K_Item7_c009",
+      "TSLA_2024_10K_Item7_c008",
+      "TSLA_2023_10K_Item7_c010",
+      "TSLA_2023_10K_Item8_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c009"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 32.122199998411816
+  },
+  {
+    "query_id": "sq_24",
+    "category": "comparison",
+    "query": "What was the percentage decrease in the total cost of revenues as a percentage of revenues for Alphabet Inc. from 2023 to 2024?",
+    "retrieved_ids": [
+      "GOOGL_2024_10K_Item7_c010",
       "GOOGL_2024_10K_Item7_c008",
-      "GOOGL_2024_10K_Item7_c007",
-      "GOOGL_2023_10K_Item7_c008",
-      "GOOGL_2022_10K_Item7_c008",
-      "GOOGL_2024_10K_Item7_c013"
+      "GOOGL_2023_10K_Item7_c010",
+      "GOOGL_2022_10K_Item7_c009",
+      "GOOGL_2023_10K_Item7_c009"
     ],
     "gt_chunks": [
-      "GOOGL_2024_10K_Item7_c014",
-      "GOOGL_2024_10K_Item8_c006"
+      "GOOGL_2023_10K_Item8_c005",
+      "GOOGL_2024_10K_Item7_c010"
+    ],
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 0.6131471927654584,
+    "latency_ms": 28.500199994596187
+  },
+  {
+    "query_id": "sq_25",
+    "category": "comparison",
+    "query": "What was the percentage change in Research and Development expenses for Microsoft as a percentage of revenue from 2021 to 2022?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2022_10K_Item7_c011",
+      "GOOGL_2023_10K_Item7_c011",
+      "TSLA_2024_10K_Item7_c012",
+      "MSFT_2024_10K_Item7_c006"
+    ],
+    "gt_chunks": [
+      "MSFT_2022_10K_Item7_c007"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 11.003499996149912
+    "latency_ms": 29.543599994212855
   },
   {
-    "query_id": "q_54",
-    "category": "lexical_gap",
-    "query": "What was Microsoft's capex in fiscal year 2023?",
+    "query_id": "sq_26",
+    "category": "comparison",
+    "query": "What was the difference in automotive sales revenue between fiscal year 2024 and fiscal year 2023 for TSLA?",
     "retrieved_ids": [
-      "MSFT_2022_10K_Item1_c007",
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2022_10K_Item1_c004",
-      "MSFT_2024_10K_Item8_c025",
-      "MSFT_2024_10K_Item7_c002"
+      "NVDA_2024_10K_Item7_c004",
+      "NVDA_2023_10K_Item7_c002",
+      "NVDA_2024_10K_Item7_c005",
+      "MSFT_2024_10K_Item8_c024",
+      "NVDA_2024_10K_Item7_c009"
     ],
     "gt_chunks": [
-      "MSFT_2023_10K_Item7_c011",
+      "TSLA_2024_10K_Item7_c010",
+      "TSLA_2024_10K_Item8_c010"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 41.263099999923725
+  },
+  {
+    "query_id": "sq_27",
+    "category": "comparison",
+    "query": "What was the net income attributable to common stockholders in fiscal year 2024 compared to fiscal year 2023 for Tesla, Inc.?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item8_c004",
+      "TSLA_2024_10K_Item8_c004",
+      "TSLA_2022_10K_Item8_c004",
+      "TSLA_2024_10K_Item8_c029",
+      "TSLA_2024_10K_Item7_c000"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item8_c004",
+      "TSLA_2023_10K_Item8_c004"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 52.046600001631305
+  },
+  {
+    "query_id": "sq_28",
+    "category": "comparison",
+    "query": "What was the difference in net sales between the Americas and Greater China segments for Apple Inc. in fiscal year 2022 compared to fiscal year 2021?",
+    "retrieved_ids": [
+      "AAPL_2024_10K_Item7_c000",
+      "AAPL_2022_10K_Item7_c002",
+      "AAPL_2022_10K_Item7_c001",
+      "AAPL_2023_10K_Item7_c001",
+      "AAPL_2022_10K_Item8_c024"
+    ],
+    "gt_chunks": [
+      "AAPL_2022_10K_Item7_c002"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 32.420099996670615
+  },
+  {
+    "query_id": "sq_29",
+    "category": "comparison",
+    "query": "What was the increase in Research and Development expenses from 2022 to 2023 for GOOGL?",
+    "retrieved_ids": [
+      "GOOGL_2023_10K_Item7_c011",
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2024_10K_Item7_c010",
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "GOOGL_2023_10K_Item7_c011"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 47.367200000735465
+  },
+  {
+    "query_id": "sq_30",
+    "category": "comparison",
+    "query": "What is the difference in deferred revenue additions during fiscal year 2024 compared to fiscal year 2023 for NVIDIA Corporation?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item8_c035",
+      "NVDA_2024_10K_Item8_c025",
+      "NVDA_2023_10K_Item8_c037",
+      "NVDA_2022_10K_Item7_c009",
+      "NVDA_2022_10K_Item8_c038"
+    ],
+    "gt_chunks": [
+      "NVDA_2024_10K_Item8_c025"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 43.017099997086916
+  },
+  {
+    "query_id": "sq_31",
+    "category": "comparison",
+    "query": "In fiscal year 2024, what was the difference in gross profit between TSLAs automotive and energy generation and storage segments?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item8_c053",
+      "TSLA_2023_10K_Item8_c057",
+      "TSLA_2022_10K_Item8_c061",
+      "TSLA_2024_10K_Item7_c010",
+      "TSLA_2023_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item7_c010",
+      "TSLA_2024_10K_Item8_c053"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8772153153380493,
+    "latency_ms": 49.99359999783337
+  },
+  {
+    "query_id": "sq_32",
+    "category": "comparison",
+    "query": "What was the increase in gross profit from 2022 to 2023 for Tesla, Inc.?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c008",
+      "TSLA_2023_10K_Item7_c010",
+      "NVDA_2022_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c009",
+      "NVDA_2023_10K_Item7_c009"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c010"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 30.370200001925696
+  },
+  {
+    "query_id": "sq_33",
+    "category": "comparison",
+    "query": "What was Tesla, Inc.s gross profit for the year ended December 31, 2022, compared to the year ended December 31, 2021?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c010",
+      "TSLA_2022_10K_Item8_c061",
+      "TSLA_2023_10K_Item7_c012",
+      "TSLA_2024_10K_Item7_c010",
+      "TSLA_2023_10K_Item7_c011"
+    ],
+    "gt_chunks": [
+      "TSLA_2022_10K_Item8_c061",
+      "TSLA_2022_10K_Item8_c004"
+    ],
+    "recall": 0.5,
+    "mrr": 0.5,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 42.68400000000838
+  },
+  {
+    "query_id": "sq_34",
+    "category": "comparison",
+    "query": "What was the percentage increase in research and development expenses as a percentage of revenue for NVDA between fiscal year 2023 and fiscal year 2022?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c010",
+      "TSLA_2024_10K_Item7_c012"
+    ],
+    "gt_chunks": [
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2023_10K_Item7_c009"
+    ],
+    "recall": 0.5,
+    "mrr": 0.5,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 34.73189999931492
+  },
+  {
+    "query_id": "sq_35",
+    "category": "comparison",
+    "query": "What was the difference in direct vehicle leasing revenue between 2024 and 2023 for TSLA?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item8_c011",
+      "TSLA_2023_10K_Item8_c011",
+      "TSLA_2022_10K_Item8_c015",
+      "TSLA_2023_10K_Item8_c015",
+      "TSLA_2024_10K_Item8_c015"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item8_c011",
+      "TSLA_2023_10K_Item8_c011"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 29.189900000346825
+  },
+  {
+    "query_id": "sq_36",
+    "category": "comparison",
+    "query": "What was the increase in Google other revenues from 2021 to 2022, and what was the increase in Google Cloud revenues from 2021 to 2022?",
+    "retrieved_ids": [
+      "GOOGL_2022_10K_Item7_c009",
+      "GOOGL_2022_10K_Item7_c012",
+      "GOOGL_2022_10K_Item7_c008",
+      "GOOGL_2022_10K_Item7_c011",
+      "GOOGL_2023_10K_Item7_c009"
+    ],
+    "gt_chunks": [
+      "GOOGL_2022_10K_Item7_c009"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 48.243000004731584
+  },
+  {
+    "query_id": "sq_37",
+    "category": "comparison",
+    "query": "What was the percentage of revenue from sales to customers outside of the United States for NVDA for fiscal year 2024 compared to fiscal year 2023?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2024_10K_Item1A_c024",
+      "NVDA_2024_10K_Item7_c009",
+      "NVDA_2022_10K_Item7_c010",
+      "NVDA_2024_10K_Item8_c035"
+    ],
+    "gt_chunks": [
+      "NVDA_2024_10K_Item8_c035",
+      "NVDA_2023_10K_Item7_c008"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 0.8503449055347546,
+    "latency_ms": 44.343100002151914
+  },
+  {
+    "query_id": "sq_38",
+    "category": "comparison",
+    "query": "In fiscal year 2024, what was the percentage change in NVIDIAs Compute & Networking operating income compared to fiscal year 2023?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item7_c008",
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2022_10K_Item7_c009",
+      "NVDA_2024_10K_Item7_c009",
+      "NVDA_2022_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "NVDA_2024_10K_Item7_c009"
+    ],
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.43067655807339306,
+    "latency_ms": 35.5788999950164
+  },
+  {
+    "query_id": "sq_39",
+    "category": "comparison",
+    "query": "What was the increase in operating income for Google Cloud from fiscal year 2023 to fiscal year 2024?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item7_c004",
+      "GOOGL_2024_10K_Item7_c011",
+      "NVDA_2024_10K_Item7_c009",
+      "GOOGL_2024_10K_Item7_c013",
+      "MSFT_2024_10K_Item8_c025"
+    ],
+    "gt_chunks": [
+      "GOOGL_2024_10K_Item7_c011",
+      "GOOGL_2024_10K_Item7_c012"
+    ],
+    "recall": 0.5,
+    "mrr": 0.5,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 16.99979999830248
+  },
+  {
+    "query_id": "sq_40",
+    "category": "comparison",
+    "query": "What was the change in basic net income per share of consolidated stock for Alphabet Inc. from the year ended December 31, 2022 to the year ended December 31, 2023?",
+    "retrieved_ids": [
+      "GOOGL_2023_10K_Item8_c039",
+      "GOOGL_2024_10K_Item8_c038",
+      "TSLA_2022_10K_Item8_c019",
+      "GOOGL_2023_10K_Item8_c038",
+      "TSLA_2024_10K_Item8_c029"
+    ],
+    "gt_chunks": [
+      "GOOGL_2022_10K_Item8_c005",
+      "GOOGL_2023_10K_Item8_c038",
+      "GOOGL_2023_10K_Item8_c039",
+      "GOOGL_2023_10K_Item8_c005"
+    ],
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 0.5585075862632192,
+    "latency_ms": 47.23240000021178
+  },
+  {
+    "query_id": "sq_41",
+    "category": "lexical_gap",
+    "query": "What was the net effect on NVIDIAs gross margin in fiscal year 2022?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c009",
+      "NVDA_2022_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c009",
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c008"
+    ],
+    "gt_chunks": [
+      "NVDA_2022_10K_Item7_c004",
+      "NVDA_2022_10K_Item7_c010"
+    ],
+    "recall": 0.5,
+    "mrr": 0.5,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 24.785699999483768
+  },
+  {
+    "query_id": "sq_42",
+    "category": "lexical_gap",
+    "query": "For the fiscal year 2022, what was the amount of net earnings for TSLA?",
+    "retrieved_ids": [
+      "NVDA_2022_10K_Item8_c030",
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2022_10K_Item8_c031",
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2023_10K_Item8_c017"
+    ],
+    "gt_chunks": [
+      "TSLA_2022_10K_Item8_c019"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 30.740399997739587
+  },
+  {
+    "query_id": "sq_43",
+    "category": "lexical_gap",
+    "query": "What was Teslas R&D spend for the fiscal year ended December 31, 2024?",
+    "retrieved_ids": [
+      "GOOGL_2024_10K_Item8_c039",
+      "TSLA_2023_10K_Item7_c012",
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040",
+      "GOOGL_2024_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "mrr": 0.3333333333333333,
+    "ndcg": 0.5,
+    "latency_ms": 30.539400002453476
+  },
+  {
+    "query_id": "sq_44",
+    "category": "lexical_gap",
+    "query": "For TSLA in fiscal year 2023, what was the R&D spend?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040",
+      "GOOGL_2024_10K_Item8_c039",
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c041"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 13.488700002199039
+  },
+  {
+    "query_id": "sq_45",
+    "category": "lexical_gap",
+    "query": "What was NVIDIAs R&D spend for the year ended January 29, 2023?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040",
+      "GOOGL_2024_10K_Item8_c039",
+      "GOOGL_2023_10K_Item7_c007"
+    ],
+    "gt_chunks": [
+      "NVDA_2023_10K_Item8_c018"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 25.935999998182524
+  },
+  {
+    "query_id": "sq_46",
+    "category": "lexical_gap",
+    "query": "What was the NVIDIA R&D spend for the fiscal year 2024?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item8_c017",
+      "NVDA_2024_10K_Item7_c004",
+      "GOOGL_2024_10K_Item8_c039",
+      "NVDA_2022_10K_Item8_c030",
+      "TSLA_2023_10K_Item7_c012"
+    ],
+    "gt_chunks": [
+      "NVDA_2024_10K_Item7_c004"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 18.32480000302894
+  },
+  {
+    "query_id": "sq_47",
+    "category": "lexical_gap",
+    "query": "For Tesla, Inc. in fiscal year 2022, what was the R&D spend?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040",
+      "GOOGL_2024_10K_Item8_c039",
+      "TSLA_2024_10K_Item8_c045",
+      "TSLA_2024_10K_Item7_c012"
+    ],
+    "gt_chunks": [
+      "TSLA_2022_10K_Item8_c004"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 17.8442999967956
+  },
+  {
+    "query_id": "sq_48",
+    "category": "lexical_gap",
+    "query": "What were Microsofts R&D spend for the Productivity and Business Processes segment in fiscal year 2024?",
+    "retrieved_ids": [
+      "MSFT_2024_10K_Item8_c036",
+      "TSLA_2024_10K_Item7_c012",
+      "MSFT_2024_10K_Item8_c035",
+      "MSFT_2022_10K_Item7_c005",
+      "MSFT_2024_10K_Item7_c005"
+    ],
+    "gt_chunks": [
+      "MSFT_2024_10K_Item7_c005"
+    ],
+    "recall": 1.0,
+    "mrr": 0.2,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 26.886100000410806
+  },
+  {
+    "query_id": "sq_49",
+    "category": "lexical_gap",
+    "query": "What was NVDAs R&D spend for fiscal year 2022 expressed as a percentage of revenue?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "TSLA_2024_10K_Item7_c012",
+      "AAPL_2023_10K_Item7_c003",
+      "GOOGL_2022_10K_Item7_c011",
+      "AAPL_2024_10K_Item7_c002"
+    ],
+    "gt_chunks": [
+      "NVDA_2022_10K_Item7_c009"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 31.6199000008055
+  },
+  {
+    "query_id": "sq_50",
+    "category": "lexical_gap",
+    "query": "What were the net cash provided by operating activities for Alphabet Inc. in 2023?",
+    "retrieved_ids": [
+      "GOOGL_2023_10K_Item7_c014",
+      "GOOGL_2024_10K_Item7_c013",
+      "NVDA_2023_10K_Item7_c011",
+      "GOOGL_2022_10K_Item7_c013",
+      "TSLA_2024_10K_Item7_c016"
+    ],
+    "gt_chunks": [
+      "GOOGL_2023_10K_Item8_c007"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 22.414799997932278
+  },
+  {
+    "query_id": "sq_51",
+    "category": "lexical_gap",
+    "query": "For Alphabet Inc. (GOOGL), what was the amount of compensation expenses for employees in finance, human resources, information technology, legal, and other administrative support functions as a percentage of total revenues in fiscal year 2023?",
+    "retrieved_ids": [
+      "GOOGL_2022_10K_Item7_c005",
+      "GOOGL_2023_10K_Item7_c006",
+      "GOOGL_2024_10K_Item7_c006",
+      "GOOGL_2024_10K_Item7_c005",
+      "GOOGL_2023_10K_Item7_c005"
+    ],
+    "gt_chunks": [
+      "GOOGL_2023_10K_Item7_c006",
+      "GOOGL_2023_10K_Item7_c012"
+    ],
+    "recall": 0.5,
+    "mrr": 0.5,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 63.83310000092024
+  },
+  {
+    "query_id": "sq_52",
+    "category": "lexical_gap",
+    "query": "For AMZN in 2023, what was the amount of capex?",
+    "retrieved_ids": [
+      "AAPL_2023_10K_Item1A_c034",
+      "AAPL_2023_10K_Item1A_c019",
+      "AAPL_2023_10K_Item8_c012",
+      "AAPL_2023_10K_Item8_c013",
+      "AAPL_2022_10K_Item1A_c037"
+    ],
+    "gt_chunks": [
+      "AMZN_2023_10K_Item8_c007"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 20.928700003423728
+  },
+  {
+    "query_id": "sq_53",
+    "category": "lexical_gap",
+    "query": "What is the net R&D spend for Amazon in fiscal year 2024?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c041",
+      "GOOGL_2024_10K_Item8_c040",
+      "GOOGL_2024_10K_Item8_c039",
+      "NVDA_2023_10K_Item8_c017"
+    ],
+    "gt_chunks": [
+      "AMZN_2024_10K_Item8_c026"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 18.937799999548588
+  },
+  {
+    "query_id": "sq_54",
+    "category": "lexical_gap",
+    "query": "For Apple Inc. (AAPL) in fiscal year 2022, what is the dollar value of R&D spend?",
+    "retrieved_ids": [
+      "AAPL_2023_10K_Item7_c003",
+      "GOOGL_2023_10K_Item8_c040",
+      "AAPL_2022_10K_Item1A_c049",
+      "AAPL_2022_10K_Item7_c003",
+      "GOOGL_2024_10K_Item8_c039"
+    ],
+    "gt_chunks": [
+      "AAPL_2022_10K_Item7_c003"
+    ],
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.43067655807339306,
+    "latency_ms": 29.747099993983284
+  },
+  {
+    "query_id": "sq_55",
+    "category": "lexical_gap",
+    "query": "What was the R&D spend of TSLA in the year ended December 31, 2023?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040",
+      "GOOGL_2024_10K_Item8_c039",
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2024_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 23.82740000030026
+  },
+  {
+    "query_id": "sq_56",
+    "category": "lexical_gap",
+    "query": "What were Microsofts R&D spend for the fiscal year 2024?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2024_10K_Item8_c039",
+      "GOOGL_2023_10K_Item8_c041",
+      "GOOGL_2023_10K_Item8_c040",
+      "NVDA_2023_10K_Item8_c017"
+    ],
+    "gt_chunks": [
+      "MSFT_2024_10K_Item7_c007"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 12.990200004423968
+  },
+  {
+    "query_id": "sq_57",
+    "category": "lexical_gap",
+    "query": "For fiscal year 2024, what were the capitalized expenditures for Alphabet Inc.?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c012",
+      "GOOGL_2022_10K_Item8_c040",
+      "MSFT_2023_10K_Item8_c024",
+      "GOOGL_2023_10K_Item8_c041",
+      "GOOGL_2024_10K_Item7_c007"
+    ],
+    "gt_chunks": [
+      "GOOGL_2024_10K_Item7_c007"
+    ],
+    "recall": 1.0,
+    "mrr": 0.2,
+    "ndcg": 0.38685280723454163,
+    "latency_ms": 18.743499997071922
+  },
+  {
+    "query_id": "sq_58",
+    "category": "lexical_gap",
+    "query": "What was Teslas R&D spend for the automotive segment in fiscal year 2022?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040",
+      "TSLA_2024_10K_Item7_c012",
+      "NVDA_2022_10K_Item7_c010",
+      "AAPL_2022_10K_Item8_c009"
+    ],
+    "gt_chunks": [
+      "TSLA_2022_10K_Item8_c004"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 39.40870000224095
+  },
+  {
+    "query_id": "sq_59",
+    "category": "lexical_gap",
+    "query": "What was Teslas R&D spend in fiscal year 2024?",
+    "retrieved_ids": [
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2024_10K_Item8_c039",
+      "GOOGL_2024_10K_Item7_c010",
+      "TSLA_2024_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c040"
+    ],
+    "gt_chunks": [
+      "TSLA_2024_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.43067655807339306,
+    "latency_ms": 12.684699999226723
+  },
+  {
+    "query_id": "sq_60",
+    "category": "lexical_gap",
+    "query": "For GOOGL in 2023, what was the dollar value of the SBC expense that contributed to the increase in compensation expenses of Google Services?",
+    "retrieved_ids": [
+      "GOOGL_2024_10K_Item7_c010",
+      "GOOGL_2024_10K_Item7_c011",
+      "GOOGL_2023_10K_Item7_c011",
+      "GOOGL_2023_10K_Item7_c012",
+      "GOOGL_2024_10K_Item7_c012"
+    ],
+    "gt_chunks": [
+      "GOOGL_2023_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "mrr": 0.25,
+    "ndcg": 0.43067655807339306,
+    "latency_ms": 42.10360000433866
+  },
+  {
+    "query_id": "sq_61",
+    "category": "temporal_routing",
+    "query": "What was the total self-insurance liability of AMZN as of December 31, 2024?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item8_c010",
+      "GOOGL_2024_10K_Item8_c026",
+      "GOOGL_2023_10K_Item8_c026",
+      "TSLA_2024_10K_Item8_c030",
+      "TSLA_2024_10K_Item8_c053"
+    ],
+    "gt_chunks": [
+      "AMZN_2024_10K_Item8_c021"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 21.61070000147447
+  },
+  {
+    "query_id": "sq_62",
+    "category": "temporal_routing",
+    "query": "As of December 31, 2022, what was the total amount of deferred revenue related to customer payments for TSLA?",
+    "retrieved_ids": [
+      "TSLA_2022_10K_Item8_c014",
+      "TSLA_2023_10K_Item8_c014",
+      "TSLA_2024_10K_Item8_c013",
+      "TSLA_2023_10K_Item8_c013",
+      "TSLA_2024_10K_Item8_c010"
+    ],
+    "gt_chunks": [
+      "TSLA_2022_10K_Item8_c015",
+      "TSLA_2022_10K_Item8_c014"
+    ],
+    "recall": 0.5,
+    "mrr": 1.0,
+    "ndcg": 0.6131471927654584,
+    "latency_ms": 18.716200000199024
+  },
+  {
+    "query_id": "sq_63",
+    "category": "temporal_routing",
+    "query": "For the fiscal year 2023, what was the net income of Alphabet Inc. (GOOGL)?",
+    "retrieved_ids": [
+      "GOOGL_2022_10K_Item1A_c050",
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c010",
+      "GOOGL_2023_10K_Item1A_c053",
+      "NVDA_2023_10K_Item7_c008"
+    ],
+    "gt_chunks": [
+      "GOOGL_2023_10K_Item8_c007"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 15.408700004627462
+  },
+  {
+    "query_id": "sq_64",
+    "category": "temporal_routing",
+    "query": "What was the net income for Alphabet Inc. in fiscal year 2022?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c008",
+      "MSFT_2022_10K_Item7_c009",
+      "MSFT_2023_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "GOOGL_2022_10K_Item8_c005",
+      "GOOGL_2022_10K_Item8_c007"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 22.25390000239713
+  },
+  {
+    "query_id": "sq_65",
+    "category": "temporal_routing",
+    "query": "What was Microsofts (MSFT) net income for the fiscal year 2023?",
+    "retrieved_ids": [
+      "MSFT_2022_10K_Item1A_c048",
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c010",
+      "NVDA_2023_10K_Item7_c008",
+      "MSFT_2024_10K_Item7_c008"
+    ],
+    "gt_chunks": [
+      "MSFT_2023_10K_Item8_c000",
+      "MSFT_2023_10K_Item7_c005"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 17.070699999749195
+  },
+  {
+    "query_id": "sq_66",
+    "category": "temporal_routing",
+    "query": "What was the net income for MSFT in fiscal year 2023?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c010",
+      "MSFT_2022_10K_Item1A_c048",
+      "NVDA_2023_10K_Item7_c008",
+      "MSFT_2024_10K_Item7_c008"
+    ],
+    "gt_chunks": [
+      "MSFT_2023_10K_Item7_c009"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 15.67580000119051
+  },
+  {
+    "query_id": "sq_67",
+    "category": "temporal_routing",
+    "query": "For the fiscal year 2023, what was the amount of net cash provided by operating activities for TSLA?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c011",
+      "NVDA_2024_10K_Item7_c011",
+      "NVDA_2022_10K_Item7_c012",
+      "GOOGL_2023_10K_Item7_c014",
+      "NVDA_2023_10K_Item8_c006"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c016",
+      "TSLA_2023_10K_Item7_c000"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 31.328400000347756
+  },
+  {
+    "query_id": "sq_68",
+    "category": "temporal_routing",
+    "query": "What was the amount of cash provided by operating activities for Amazon in fiscal year 2024?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item7_c011",
+      "NVDA_2022_10K_Item7_c012",
+      "NVDA_2023_10K_Item7_c011",
+      "GOOGL_2024_10K_Item7_c013",
+      "GOOGL_2023_10K_Item7_c014"
+    ],
+    "gt_chunks": [
+      "AMZN_2024_10K_Item8_c003",
+      "AMZN_2024_10K_Item7_c005"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 29.68170000531245
+  },
+  {
+    "query_id": "sq_69",
+    "category": "temporal_routing",
+    "query": "As of June 30, 2023, what was the total allowance for doubtful accounts included in Microsofts consolidated balance sheets?",
+    "retrieved_ids": [
+      "MSFT_2024_10K_Item8_c007",
+      "MSFT_2023_10K_Item8_c007",
+      "MSFT_2022_10K_Item8_c007",
+      "NVDA_2024_10K_Item8_c035",
+      "NVDA_2023_10K_Item8_c037"
+    ],
+    "gt_chunks": [
+      "MSFT_2023_10K_Item8_c007"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6309297535714575,
+    "latency_ms": 31.327700002293568
+  },
+  {
+    "query_id": "sq_70",
+    "category": "temporal_routing",
+    "query": "At the end of fiscal year 2023, what was the total carrying value of assets held by VIEs, as presented in the consolidated balance sheet of TSLA?",
+    "retrieved_ids": [
+      "GOOGL_2024_10K_Item8_c027",
+      "NVDA_2024_10K_Item8_c023",
+      "GOOGL_2023_10K_Item8_c027",
+      "TSLA_2024_10K_Item8_c022",
+      "GOOGL_2022_10K_Item8_c027"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item8_c055"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 52.25100000097882
+  },
+  {
+    "query_id": "sq_71",
+    "category": "temporal_routing",
+    "query": "What was the amount of cash from operations for MSFT in fiscal year 2023?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c003",
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2024_10K_Item7_c010"
+    ],
+    "gt_chunks": [
       "MSFT_2023_10K_Item7_c013"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 8.170399989467114
+    "latency_ms": 18.613400003232528
   },
   {
-    "query_id": "q_55",
-    "category": "lexical_gap",
-    "query": "What was Apple's capex in 2023?",
+    "query_id": "sq_72",
+    "category": "temporal_routing",
+    "query": "What was the net income for NVDA in fiscal year 2024?",
     "retrieved_ids": [
-      "AAPL_2023_10K_Item1A_c034",
-      "AAPL_2023_10K_Item8_c022",
-      "AAPL_2023_10K_Item8_c021",
-      "AAPL_2023_10K_Item8_c020",
-      "AAPL_2023_10K_Item1A_c019"
-    ],
-    "gt_chunks": [
-      "AAPL_2023_10K_Item8_c000",
-      "AAPL_2023_10K_Item8_c001"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 10.4297000070801
-  },
-  {
-    "query_id": "q_56",
-    "category": "lexical_gap",
-    "query": "What was Google's technology expenditure in 2023?",
-    "retrieved_ids": [
-      "GOOGL_2023_10K_Item7_c008",
-      "GOOGL_2023_10K_Item8_c034",
-      "GOOGL_2024_10K_Item7_c000",
-      "AAPL_2023_10K_Item1A_c034",
-      "GOOGL_2022_10K_Item8_c031"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2023_10K_Item7_c012"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.06169999204576
-  },
-  {
-    "query_id": "q_57",
-    "category": "lexical_gap",
-    "query": "What was Nvidia's R&D spend in 2024?",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item7_c010",
-      "GOOGL_2024_10K_Item8_c039",
-      "TSLA_2023_10K_Item7_c012",
-      "TSLA_2024_10K_Item7_c012",
-      "AAPL_2024_10K_Item7_c002"
-    ],
-    "gt_chunks": [
+      "NVDA_2024_10K_Item1A_c078",
       "NVDA_2024_10K_Item7_c010",
-      "NVDA_2024_10K_Item8_c024"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.259399998583831
-  },
-  {
-    "query_id": "q_58",
-    "category": "lexical_gap",
-    "query": "What was Tesla's R&D spend in 2023?",
-    "retrieved_ids": [
-      "TSLA_2023_10K_Item7_c012",
-      "TSLA_2024_10K_Item8_c045",
-      "TSLA_2023_10K_Item8_c049",
-      "GOOGL_2023_10K_Item8_c040",
-      "GOOGL_2024_10K_Item1A_c001"
-    ],
-    "gt_chunks": [
-      "TSLA_2023_10K_Item8_c044",
-      "TSLA_2023_10K_Item7_c012"
-    ],
-    "recall": 0.5,
-    "mrr": 1.0,
-    "ndcg": 0.6131471927654584,
-    "latency_ms": 13.347200001589954
-  },
-  {
-    "query_id": "q_59",
-    "category": "lexical_gap",
-    "query": "What were Microsoft's R&D spend in 2024?",
-    "retrieved_ids": [
-      "TSLA_2024_10K_Item7_c012",
-      "GOOGL_2023_10K_Item8_c041",
-      "GOOGL_2024_10K_Item8_c039",
-      "GOOGL_2024_10K_Item1A_c001",
-      "GOOGL_2023_10K_Item1A_c001"
-    ],
-    "gt_chunks": [
-      "MSFT_2024_10K_Item7_c007",
-      "MSFT_2024_10K_Item7_c006"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 10.81789999443572
-  },
-  {
-    "query_id": "q_60",
-    "category": "lexical_gap",
-    "query": "What was Amazon's technology expense in 2024?",
-    "retrieved_ids": [
-      "AMZN_2024_10K_Item7_c011",
-      "AMZN_2024_10K_Item8_c031",
-      "AAPL_2023_10K_Item1A_c034",
-      "AMZN_2023_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c018"
-    ],
-    "gt_chunks": [
-      "AMZN_2024_10K_Item8_c042",
-      "AMZN_2024_10K_Item7_c011"
-    ],
-    "recall": 0.5,
-    "mrr": 1.0,
-    "ndcg": 0.6131471927654584,
-    "latency_ms": 14.513699992676266
-  },
-  {
-    "query_id": "q_61",
-    "category": "temporal_routing",
-    "query": "What was Apple's net sales in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "AAPL_2024_10K_Item8_c006",
-      "AAPL_2024_10K_Item8_c000",
-      "AAPL_2023_10K_Item1A_c034",
-      "AAPL_2024_10K_Item8_c009",
-      "AAPL_2024_10K_Item7_c001"
-    ],
-    "gt_chunks": [
-      "AAPL_2023_10K_Item7_c001",
-      "AAPL_2023_10K_Item7_c002"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 10.041000001365319
-  },
-  {
-    "query_id": "q_62",
-    "category": "temporal_routing",
-    "query": "What was Microsoft's net income in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "MSFT_2023_10K_Item8_c035",
-      "MSFT_2022_10K_Item1_c007",
       "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item8_c037",
-      "MSFT_2022_10K_Item1_c023"
-    ],
-    "gt_chunks": [
-      "MSFT_2022_10K_Item7_c005",
-      "MSFT_2022_10K_Item8_c013"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 15.075900009833276
-  },
-  {
-    "query_id": "q_63",
-    "category": "temporal_routing",
-    "query": "What was Nvidia's net income in 2023, ignoring 2024?",
-    "retrieved_ids": [
-      "NVDA_2024_10K_Item7_c004",
-      "NVDA_2024_10K_Item8_c006",
-      "NVDA_2024_10K_Item7_c005",
-      "NVDA_2024_10K_Item8_c020",
+      "MSFT_2024_10K_Item8_c025",
       "NVDA_2024_10K_Item7_c009"
     ],
     "gt_chunks": [
-      "NVDA_2023_10K_Item8_c021",
-      "NVDA_2023_10K_Item8_c022"
+      "NVDA_2024_10K_Item8_c020"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 14.488100001472048
+    "latency_ms": 15.838900006201584
   },
   {
-    "query_id": "q_64",
+    "query_id": "sq_73",
     "category": "temporal_routing",
-    "query": "What was Tesla's total revenues in fiscal year 2022 (rather than 2023)?",
+    "query": "What was Apple Inc.s net income for the fiscal year ended September 30, 2023?",
     "retrieved_ids": [
-      "TSLA_2022_10K_Item8_c057",
-      "TSLA_2023_10K_Item8_c051",
-      "TSLA_2022_10K_Item8_c004",
-      "TSLA_2023_10K_Item8_c049",
-      "NVDA_2023_10K_Item8_c022"
-    ],
-    "gt_chunks": [
-      "TSLA_2022_10K_Item8_c034",
-      "TSLA_2022_10K_Item8_c061"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 19.91709999856539
-  },
-  {
-    "query_id": "q_65",
-    "category": "temporal_routing",
-    "query": "What was Amazon's net income in 2023 (excluding 2024)?",
-    "retrieved_ids": [
-      "AMZN_2024_10K_Item8_c018",
-      "AMZN_2024_10K_Item8_c026",
-      "AMZN_2024_10K_Item8_c031",
-      "AMZN_2023_10K_Item7_c008",
-      "AMZN_2024_10K_Item7_c008"
-    ],
-    "gt_chunks": [
-      "AMZN_2023_10K_Item8_c004",
-      "AMZN_2023_10K_Item8_c008"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 13.307200002600439
-  },
-  {
-    "query_id": "q_66",
-    "category": "temporal_routing",
-    "query": "What was Alphabet's net income in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item8_c038",
-      "GOOGL_2024_10K_Item8_c039",
-      "GOOGL_2024_10K_Item8_c040",
-      "GOOGL_2024_10K_Item8_c028",
-      "GOOGL_2024_10K_Item8_c026"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item8_c038",
-      "GOOGL_2023_10K_Item7_c011"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 16.577300004428253
-  },
-  {
-    "query_id": "q_67",
-    "category": "temporal_routing",
-    "query": "What was Apple's R&D expense in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "TSLA_2023_10K_Item7_c012",
-      "GOOGL_2023_10K_Item8_c040",
-      "AAPL_2023_10K_Item7_c003",
-      "GOOGL_2023_10K_Item8_c041",
-      "GOOGL_2024_10K_Item8_c039"
-    ],
-    "gt_chunks": [
-      "AAPL_2022_10K_Item7_c003",
-      "AAPL_2022_10K_Item7_c004"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 17.420199990738183
-  },
-  {
-    "query_id": "q_68",
-    "category": "temporal_routing",
-    "query": "What was Microsoft's operating income in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "MSFT_2024_10K_Item7_c008",
-      "MSFT_2024_10K_Item8_c037",
-      "MSFT_2024_10K_Item8_c028",
-      "MSFT_2022_10K_Item1_c007",
-      "MSFT_2023_10K_Item8_c035"
-    ],
-    "gt_chunks": [
-      "MSFT_2023_10K_Item7_c007",
-      "MSFT_2023_10K_Item7_c008"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 13.424999997369014
-  },
-  {
-    "query_id": "q_69",
-    "category": "temporal_routing",
-    "query": "What was Tesla's capital expenditures in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "TSLA_2023_10K_Item8_c049",
-      "TSLA_2024_10K_Item8_c045",
-      "TSLA_2022_10K_Item8_c053",
-      "GOOGL_2023_10K_Item7_c015",
-      "TSLA_2024_10K_Item8_c049"
-    ],
-    "gt_chunks": [
-      "TSLA_2022_10K_Item8_c005",
-      "TSLA_2022_10K_Item8_c025"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 13.166000004275702
-  },
-  {
-    "query_id": "q_70",
-    "category": "temporal_routing",
-    "query": "What was Nvidia's net income in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "NVDA_2023_10K_Item7_c002",
-      "NVDA_2024_10K_Item8_c006",
-      "NVDA_2024_10K_Item8_c020",
-      "NVDA_2023_10K_Item8_c006",
-      "NVDA_2022_10K_Item8_c018"
-    ],
-    "gt_chunks": [
-      "NVDA_2022_10K_Item8_c021",
-      "NVDA_2022_10K_Item8_c022"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 12.801500008208677
-  },
-  {
-    "query_id": "q_71",
-    "category": "temporal_routing",
-    "query": "What was Google's net income in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2023_10K_Item8_c044",
-      "GOOGL_2024_10K_Item7_c010",
-      "GOOGL_2024_10K_Item8_c042",
-      "GOOGL_2024_10K_Item7_c000"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item8_c038",
-      "GOOGL_2023_10K_Item7_c011"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 13.59970000339672
-  },
-  {
-    "query_id": "q_72",
-    "category": "temporal_routing",
-    "query": "What were Amazon's technology expenses in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "AMZN_2024_10K_Item8_c026",
-      "AMZN_2024_10K_Item8_c014",
-      "AMZN_2024_10K_Item8_c031",
-      "AMZN_2024_10K_Item7_c011",
-      "AMZN_2024_10K_Item8_c021"
-    ],
-    "gt_chunks": [
-      "AMZN_2023_10K_Item8_c043",
-      "AMZN_2023_10K_Item7_c009"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 18.05189999868162
-  },
-  {
-    "query_id": "q_73",
-    "category": "temporal_routing",
-    "query": "What was Apple's operating income in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "AAPL_2023_10K_Item1A_c034",
+      "AAPL_2023_10K_Item8_c000",
       "AAPL_2024_10K_Item8_c000",
-      "AAPL_2024_10K_Item8_c006",
-      "AAPL_2023_10K_Item8_c021",
-      "AAPL_2024_10K_Item8_c013"
+      "AAPL_2023_10K_Item8_c020",
+      "AAPL_2023_10K_Item8_c003",
+      "AAPL_2022_10K_Item8_c000"
     ],
     "gt_chunks": [
-      "AAPL_2023_10K_Item8_c019",
-      "AAPL_2023_10K_Item8_c017"
+      "AAPL_2023_10K_Item8_c000"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 24.18049999687355
+  },
+  {
+    "query_id": "sq_74",
+    "category": "temporal_routing",
+    "query": "For what total amount did Alphabet Inc. make dividend payments to its stockholders in fiscal year 2024?",
+    "retrieved_ids": [
+      "GOOGL_2024_10K_Item1A_c048",
+      "GOOGL_2024_10K_Item1A_c060",
+      "NVDA_2022_10K_Item7_c013",
+      "GOOGL_2024_10K_Item7_c013",
+      "NVDA_2024_10K_Item7_c012"
+    ],
+    "gt_chunks": [
+      "GOOGL_2024_10K_Item7_c016",
+      "GOOGL_2024_10K_Item7_c007"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 14.825500009465031
+    "latency_ms": 22.114699997473508
   },
   {
-    "query_id": "q_74",
+    "query_id": "sq_75",
     "category": "temporal_routing",
-    "query": "What was Nvidia's total assets in 2023 (not 2024)?",
+    "query": "For GOOGL in fiscal year 2022, what was the total operating income from operations?",
     "retrieved_ids": [
-      "NVDA_2024_10K_Item8_c035",
-      "NVDA_2024_10K_Item8_c024",
-      "NVDA_2024_10K_Item8_c020",
-      "NVDA_2024_10K_Item8_c027",
+      "NVDA_2023_10K_Item7_c008",
+      "NVDA_2022_10K_Item7_c009",
+      "NVDA_2022_10K_Item7_c011",
+      "MSFT_2024_10K_Item8_c025",
+      "NVDA_2024_10K_Item7_c008"
+    ],
+    "gt_chunks": [
+      "GOOGL_2022_10K_Item7_c012"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 17.960400000447407
+  },
+  {
+    "query_id": "sq_76",
+    "category": "temporal_routing",
+    "query": "What was the income tax expense for NVDA in fiscal year 2022?",
+    "retrieved_ids": [
+      "NVDA_2023_10K_Item7_c010",
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2024_10K_Item7_c010",
+      "NVDA_2022_10K_Item8_c030",
+      "MSFT_2022_10K_Item7_c008"
+    ],
+    "gt_chunks": [
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2022_10K_Item8_c030"
+    ],
+    "recall": 1.0,
+    "mrr": 0.5,
+    "ndcg": 0.6509209298071326,
+    "latency_ms": 22.141000001283828
+  },
+  {
+    "query_id": "sq_77",
+    "category": "temporal_routing",
+    "query": "For the fiscal year 2023, what was the net increase (decrease) in cash, cash equivalents, and restricted cash for AMAZON.COM, INC.?",
+    "retrieved_ids": [
+      "AAPL_2023_10K_Item8_c003",
+      "AAPL_2024_10K_Item8_c003",
+      "NVDA_2023_10K_Item7_c011",
+      "NVDA_2022_10K_Item7_c012",
+      "NVDA_2023_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "AMZN_2023_10K_Item8_c003"
+    ],
+    "recall": 0.0,
+    "mrr": 0.0,
+    "ndcg": 0.0,
+    "latency_ms": 31.224600003042724
+  },
+  {
+    "query_id": "sq_78",
+    "category": "temporal_routing",
+    "query": "What was the amount of cash paid for income taxes, net by Apple Inc. in fiscal year 2024?",
+    "retrieved_ids": [
+      "AAPL_2024_10K_Item8_c003",
+      "AAPL_2023_10K_Item8_c003",
+      "MSFT_2024_10K_Item8_c024",
+      "AAPL_2024_10K_Item8_c010",
+      "NVDA_2024_10K_Item7_c010"
+    ],
+    "gt_chunks": [
+      "AAPL_2024_10K_Item8_c003"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 22.858099997392856
+  },
+  {
+    "query_id": "sq_79",
+    "category": "temporal_routing",
+    "query": "In fiscal year 2024, what was the cash and cash equivalents at the end of period for NVIDIA Corporation?",
+    "retrieved_ids": [
+      "NVDA_2024_10K_Item8_c006",
+      "NVDA_2023_10K_Item8_c006",
+      "NVDA_2022_10K_Item8_c006",
+      "NVDA_2024_10K_Item7_c012",
       "NVDA_2024_10K_Item8_c021"
     ],
     "gt_chunks": [
-      "NVDA_2023_10K_Item8_c022",
-      "NVDA_2023_10K_Item8_c024"
+      "NVDA_2024_10K_Item8_c006"
+    ],
+    "recall": 1.0,
+    "mrr": 1.0,
+    "ndcg": 1.0,
+    "latency_ms": 22.780300001613796
+  },
+  {
+    "query_id": "sq_80",
+    "category": "temporal_routing",
+    "query": "What were the capital expenditures for Tesla, Inc. (TSLA) during the year ended December 31, 2023?",
+    "retrieved_ids": [
+      "TSLA_2024_10K_Item7_c016",
+      "TSLA_2023_10K_Item7_c014",
+      "GOOGL_2023_10K_Item7_c015",
+      "TSLA_2023_10K_Item7_c017",
+      "TSLA_2024_10K_Item8_c045"
+    ],
+    "gt_chunks": [
+      "TSLA_2023_10K_Item7_c001",
+      "TSLA_2023_10K_Item8_c006"
     ],
     "recall": 0.0,
     "mrr": 0.0,
     "ndcg": 0.0,
-    "latency_ms": 15.7242999994196
-  },
-  {
-    "query_id": "q_75",
-    "category": "temporal_routing",
-    "query": "What was Microsoft's cash and cash equivalents in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "MSFT_2023_10K_Item8_c035",
-      "MSFT_2024_10K_Item8_c037",
-      "NVDA_2023_10K_Item7_c011",
-      "NVDA_2022_10K_Item7_c013",
-      "AMZN_2023_10K_Item8_c023"
-    ],
-    "gt_chunks": [
-      "MSFT_2022_10K_Item8_c019",
-      "MSFT_2022_10K_Item8_c033"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 19.26100000855513
-  },
-  {
-    "query_id": "q_76",
-    "category": "temporal_routing",
-    "query": "What was Google's revenue in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "GOOGL_2024_10K_Item7_c010",
-      "GOOGL_2024_10K_Item7_c011",
-      "GOOGL_2024_10K_Item8_c018",
-      "GOOGL_2024_10K_Item8_c042",
-      "GOOGL_2024_10K_Item7_c000"
-    ],
-    "gt_chunks": [
-      "GOOGL_2023_10K_Item7_c010",
-      "GOOGL_2023_10K_Item7_c009"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 10.895600004005246
-  },
-  {
-    "query_id": "q_77",
-    "category": "temporal_routing",
-    "query": "What were Tesla's cash flows from operations in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "TSLA_2024_10K_Item8_c006",
-      "TSLA_2022_10K_Item8_c058",
-      "TSLA_2024_10K_Item8_c046",
-      "TSLA_2024_10K_Item8_c050",
-      "TSLA_2023_10K_Item8_c054"
-    ],
-    "gt_chunks": [
-      "TSLA_2023_10K_Item8_c031",
-      "TSLA_2023_10K_Item8_c044"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 18.45879999746103
-  },
-  {
-    "query_id": "q_78",
-    "category": "temporal_routing",
-    "query": "What was Amazon's operating income in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "AMZN_2023_10K_Item8_c032",
-      "AMZN_2023_10K_Item8_c031",
-      "AMZN_2022_10K_Item8_c031",
-      "AMZN_2024_10K_Item8_c033",
-      "AMZN_2024_10K_Item8_c034"
-    ],
-    "gt_chunks": [
-      "AMZN_2022_10K_Item8_c041",
-      "AMZN_2022_10K_Item8_c040"
-    ],
-    "recall": 0.0,
-    "mrr": 0.0,
-    "ndcg": 0.0,
-    "latency_ms": 14.738400001078844
-  },
-  {
-    "query_id": "q_79",
-    "category": "temporal_routing",
-    "query": "What were Google's R&D expenses in 2022 (not 2023)?",
-    "retrieved_ids": [
-      "GOOGL_2023_10K_Item7_c005",
-      "GOOGL_2024_10K_Item7_c005",
-      "GOOGL_2023_10K_Item7_c011",
-      "GOOGL_2022_10K_Item7_c005",
-      "GOOGL_2024_10K_Item7_c010"
-    ],
-    "gt_chunks": [
-      "GOOGL_2022_10K_Item7_c011",
-      "GOOGL_2022_10K_Item7_c005"
-    ],
-    "recall": 0.5,
-    "mrr": 0.25,
-    "ndcg": 0.2640681225725909,
-    "latency_ms": 11.30830000329297
-  },
-  {
-    "query_id": "q_80",
-    "category": "temporal_routing",
-    "query": "What was Nvidia's gross profit in 2023 (not 2024)?",
-    "retrieved_ids": [
-      "TSLA_2024_10K_Item8_c053",
-      "NVDA_2024_10K_Item7_c009",
-      "NVDA_2023_10K_Item7_c008",
-      "TSLA_2024_10K_Item7_c010",
-      "AMZN_2024_10K_Item7_c012"
-    ],
-    "gt_chunks": [
-      "NVDA_2023_10K_Item8_c024",
-      "NVDA_2023_10K_Item7_c008"
-    ],
-    "recall": 0.5,
-    "mrr": 0.3333333333333333,
-    "ndcg": 0.3065735963827292,
-    "latency_ms": 9.84020000032615
+    "latency_ms": 13.653599999088328
   }
 ]

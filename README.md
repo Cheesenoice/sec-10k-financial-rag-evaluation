@@ -34,7 +34,7 @@ NLP-project/
 │   ├── figures/              # Generated ablation charts & plots
 │   ├── scripts/              # Evaluation script runner
 │   └── ablation_report.md    # Academic evaluation report
-├── notebooks/                # Academic Jupyter Notebooks
+├── notebooks_en/             # Academic Jupyter Notebooks (English)
 │   ├── preprocessing/        # Raw parsing and chunking demos
 │   ├── baselines/            # Baseline search runs & HNSW graph plots
 │   └── 4_ablation_study_evaluation.ipynb # Presentation notebook
@@ -151,13 +151,13 @@ venv\Scripts\python eval/scripts/run_evaluation.py
 
 | Configuration                  |  Recall@5  |   MRR@5    |   NDCG@5   |  Latency (Avg)   |
 | :----------------------------- | :--------: | :--------: | :--------: | :--------------: |
-| **Config A (TF-IDF Baseline)** |   0.0594   |   0.0519   |   0.0416   |     ~6.9 ms      |
-| **Config B (BM25 Baseline)**   |   0.1125   |   0.1540   |   0.1019   |     ~18.4 ms     |
-| **Config C (Dense HNSW)**      |   0.1844   |   0.1985   |   0.1519   |     ~57.7 ms     |
-| **Config D (Hybrid - RRF)**    |   0.1844   | **0.2431** |   0.1640   |     ~63.1 ms     |
-| **Config E (Enhanced RAG)**    | **0.2531** |   0.2350   | **0.1885** | ~2289.9 ms (CPU) |
+| **Config A (TF-IDF Baseline)** |   0.2875   |   0.2250   |   0.2258   |     ~6.73 ms     |
+| **Config B (BM25 Baseline)**   |   0.4562   |   0.3602   |   0.3512   |     ~24.70 ms    |
+| **Config C (Dense HNSW)**      |   0.5000   |   0.4158   |   0.3996   |     ~46.14 ms    |
+| **Config D (Hybrid - RRF)**    |   0.5750   |   0.4227   |   0.4467   |     ~76.29 ms    |
+| **Config E (Enhanced RAG)**    | **0.7719** | **0.6056** | **0.6184** | ~2002.80 ms (CPU)|
 
 Detailed analysis and visualizations are documented in:
 
 - **Academic Report:** [ablation_report.md](file:///c:/Users/huynh/Desktop/NLP-project/eval/ablation_report.md)
-- **Jupyter Evaluation Notebook:** [4_ablation_study_evaluation.ipynb](file:///c:/Users/huynh/Desktop/NLP-project/notebooks/4_ablation_study_evaluation.ipynb)
+- **Jupyter Evaluation Notebook:** [4_ablation_study_evaluation.ipynb](file:///c:/Users/huynh/Desktop/NLP-project/notebooks_en/eval/4_ablation_study_evaluation.ipynb)
