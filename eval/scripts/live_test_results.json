@@ -1,0 +1,227 @@
+[
+  {
+    "desc": "Query 1: Factual MSFT S&M 2023",
+    "query": "What were the sales and marketing expenses for MSFT in fiscal year 2023?",
+    "mode": "baseline_1_lexical",
+    "citations": [
+      "MSFT_2024_10K_Item7_c007",
+      "MSFT_2023_10K_Item7_c008",
+      "MSFT_2023_10K_Item8_c009",
+      "GOOGL_2024_10K_Item7_c011",
+      "AMZN_2023_10K_Item7_c011"
+    ],
+    "recall": 1.0,
+    "rank": 2,
+    "answer": "According to the provided context, the sales and marketing expenses for MSFT in fiscal year 2023 were $22,759 million [Source: MSFT_2023_10K_Item7_c007]."
+  },
+  {
+    "desc": "Query 1: Factual MSFT S&M 2023",
+    "query": "What were the sales and marketing expenses for MSFT in fiscal year 2023?",
+    "mode": "baseline_2_semantic",
+    "citations": [
+      "MSFT_2023_10K_Item7_c009",
+      "NVDA_2024_10K_Item7_c010",
+      "NVDA_2023_10K_Item7_c010",
+      "TSLA_2023_10K_Item7_c013",
+      "AMZN_2023_10K_Item7_c009"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 1: Factual MSFT S&M 2023",
+    "query": "What were the sales and marketing expenses for MSFT in fiscal year 2023?",
+    "mode": "enhanced_pipeline",
+    "citations": [
+      "MSFT_2023_10K_Item7_c009",
+      "MSFT_2023_10K_Item8_c009",
+      "MSFT_2023_10K_Item7_c002",
+      "MSFT_2023_10K_Item8_c004",
+      "MSFT_2023_10K_Item7_c008"
+    ],
+    "recall": 1.0,
+    "rank": 5,
+    "answer": "Sales and marketing expenses for MSFT in fiscal year 2023 were $22,759 million [Source: MSFT_2023_10K_Item7_c008]."
+  },
+  {
+    "desc": "Query 2: Lexical Gap (AMZN Capex 2023)",
+    "query": "For AMZN in 2023, what was the amount of capex?",
+    "mode": "baseline_1_lexical",
+    "citations": [
+      "AAPL_2023_10K_Item1A_c034",
+      "AAPL_2023_10K_Item1A_c019",
+      "AAPL_2023_10K_Item8_c012",
+      "AAPL_2023_10K_Item8_c013",
+      "AAPL_2022_10K_Item1A_c037"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 2: Lexical Gap (AMZN Capex 2023)",
+    "query": "For AMZN in 2023, what was the amount of capex?",
+    "mode": "baseline_2_semantic",
+    "citations": [
+      "NVDA_2024_10K_Item7_c010",
+      "TSLA_2023_10K_Item7_c013",
+      "AAPL_2023_10K_Item7_c001",
+      "AMZN_2022_10K_Item1A_c039",
+      "TSLA_2024_10K_Item8_c029"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 2: Lexical Gap (AMZN Capex 2023)",
+    "query": "For AMZN in 2023, what was the amount of capex?",
+    "mode": "enhanced_pipeline",
+    "citations": [
+      "AMZN_2023_10K_Item1A_c044",
+      "AMZN_2023_10K_Item8_c015",
+      "AMZN_2023_10K_Item7_c006",
+      "AMZN_2023_10K_Item8_c023",
+      "AMZN_2023_10K_Item7_c007"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 3: Temporal Routing (AMZN Net Income 2024)",
+    "query": "What was the net income for Amazon in fiscal year 2024?",
+    "mode": "baseline_1_lexical",
+    "citations": [
+      "NVDA_2024_10K_Item7_c010",
+      "MSFT_2024_10K_Item7_c008",
+      "MSFT_2024_10K_Item8_c025",
+      "NVDA_2024_10K_Item7_c009",
+      "NVDA_2024_10K_Item7_c004"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 3: Temporal Routing (AMZN Net Income 2024)",
+    "query": "What was the net income for Amazon in fiscal year 2024?",
+    "mode": "baseline_2_semantic",
+    "citations": [
+      "AMZN_2022_10K_Item8_c004",
+      "AMZN_2023_10K_Item8_c004",
+      "AMZN_2024_10K_Item8_c004",
+      "AMZN_2022_10K_Item8_c005",
+      "AMZN_2024_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "rank": 3,
+    "answer": "Net income for Amazon in fiscal year 2024 was $59,248 million [Source: AMZN_2024_10K_Item8_c004]."
+  },
+  {
+    "desc": "Query 3: Temporal Routing (AMZN Net Income 2024)",
+    "query": "What was the net income for Amazon in fiscal year 2024?",
+    "mode": "enhanced_pipeline",
+    "citations": [
+      "AMZN_2024_10K_Item8_c004",
+      "AMZN_2024_10K_Item8_c018",
+      "AMZN_2024_10K_Item8_c005",
+      "AMZN_2024_10K_Item7_c012",
+      "AMZN_2024_10K_Item8_c026"
+    ],
+    "recall": 1.0,
+    "rank": 1,
+    "answer": "According to the provided source documents, the net income for Amazon in fiscal year 2024 was $59,248 million [Source: AMZN_2024_10K_Item8_c004]."
+  },
+  {
+    "desc": "Query 4: VIEs Accounting (TSLA VIEs Assets 2023)",
+    "query": "At the end of fiscal year 2023, what was the total carrying value of assets held by VIEs, as presented in the consolidated balance sheet of TSLA?",
+    "mode": "baseline_1_lexical",
+    "citations": [
+      "GOOGL_2024_10K_Item8_c027",
+      "NVDA_2024_10K_Item8_c023",
+      "GOOGL_2023_10K_Item8_c027",
+      "TSLA_2024_10K_Item8_c022",
+      "GOOGL_2022_10K_Item8_c027"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 4: VIEs Accounting (TSLA VIEs Assets 2023)",
+    "query": "At the end of fiscal year 2023, what was the total carrying value of assets held by VIEs, as presented in the consolidated balance sheet of TSLA?",
+    "mode": "baseline_2_semantic",
+    "citations": [
+      "TSLA_2023_10K_Item8_c033",
+      "TSLA_2022_10K_Item8_c060",
+      "TSLA_2022_10K_Item8_c032",
+      "MSFT_2024_10K_Item8_c026",
+      "MSFT_2022_10K_Item8_c001"
+    ],
+    "recall": 0.0,
+    "rank": -1,
+    "answer": "Information not found in provided source documents."
+  },
+  {
+    "desc": "Query 4: VIEs Accounting (TSLA VIEs Assets 2023)",
+    "query": "At the end of fiscal year 2023, what was the total carrying value of assets held by VIEs, as presented in the consolidated balance sheet of TSLA?",
+    "mode": "enhanced_pipeline",
+    "citations": [
+      "TSLA_2023_10K_Item8_c056",
+      "TSLA_2023_10K_Item8_c033",
+      "TSLA_2023_10K_Item8_c025",
+      "TSLA_2023_10K_Item8_c029",
+      "TSLA_2023_10K_Item8_c031"
+    ],
+    "recall": 1.0,
+    "rank": 1,
+    "answer": "The total carrying value of assets held by VIEs, as presented in the consolidated balance sheet of TSLA, was $4,087 million as of December 31, 2023 [Source: TSLA_2023_10K_Item8_c056]."
+  },
+  {
+    "desc": "Query 5: Factual Trend (GOOGL R&D 2023)",
+    "query": "What was the increase in Research and Development expenses from 2022 to 2023 for GOOGL?",
+    "mode": "baseline_1_lexical",
+    "citations": [
+      "GOOGL_2023_10K_Item7_c011",
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2024_10K_Item7_c010",
+      "NVDA_2022_10K_Item7_c011",
+      "NVDA_2023_10K_Item7_c010"
+    ],
+    "recall": 1.0,
+    "rank": 1,
+    "answer": "According to the provided source documents, the increase in Research and Development expenses from 2022 to 2023 for GOOGL was $5.9 billion [Source: GOOGL_2023_10K_Item7_c011].\n\nThe table presenting R&D expenses for GOOGL is as follows:\n\nYear Ended December 31,\n20222023\nResearch and development expenses$39,500 $45,427\nResearch and development expenses as a percentage of revenues14 %15 %\n\nThis indicates that R&D expenses increased from $39,500 million in 2022 to $45,427 million in 2023, resulting in a $5.9 billion increase [Source: GOOGL_2023_10K_Item7_c011]."
+  },
+  {
+    "desc": "Query 5: Factual Trend (GOOGL R&D 2023)",
+    "query": "What was the increase in Research and Development expenses from 2022 to 2023 for GOOGL?",
+    "mode": "baseline_2_semantic",
+    "citations": [
+      "GOOGL_2023_10K_Item7_c011",
+      "MSFT_2024_10K_Item7_c007",
+      "TSLA_2023_10K_Item7_c012",
+      "GOOGL_2022_10K_Item7_c011",
+      "NVDA_2022_10K_Item7_c011"
+    ],
+    "recall": 1.0,
+    "rank": 1,
+    "answer": "According to the provided source documents, the Research and Development expenses for GOOGL in 2022 and 2023 are as follows:\n\nGOOGL_2023_10K_Item7_c011:\nResearch and development expenses$39,500 $45,427\n\nThe increase in Research and Development expenses from 2022 to 2023 for GOOGL is $5.9 billion [Source: GOOGL_2023_10K_Item7_c011]."
+  },
+  {
+    "desc": "Query 5: Factual Trend (GOOGL R&D 2023)",
+    "query": "What was the increase in Research and Development expenses from 2022 to 2023 for GOOGL?",
+    "mode": "enhanced_pipeline",
+    "citations": [
+      "GOOGL_2023_10K_Item7_c011",
+      "GOOGL_2022_10K_Item7_c011",
+      "GOOGL_2023_10K_Item7_c012",
+      "GOOGL_2023_10K_Item8_c044",
+      "GOOGL_2022_10K_Item7_c012"
+    ],
+    "recall": 1.0,
+    "rank": 1,
+    "answer": "The increase in Research and Development expenses from 2022 to 2023 for GOOGL was $5.9 billion [Source: GOOGL_2023_10K_Item7_c011]."
+  }
+]

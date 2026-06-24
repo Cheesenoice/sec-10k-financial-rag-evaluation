@@ -37,6 +37,7 @@ NLP-project/
 │   ├── figures/              # Biểu đồ so sánh chất lượng và độ trễ
 │   └── scripts/              # Mã nguồn chương trình chạy đánh giá
 ├── requirements.txt          # Các thư viện phụ thuộc
+├── ui_demo_script.md         # Kịch bản thuyết trình demo được xác thực
 └── README.md                 # Hướng dẫn dự án này
 ```
 

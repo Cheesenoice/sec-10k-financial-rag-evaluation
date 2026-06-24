@@ -164,7 +164,7 @@ NLP-project/
 │   │   └── reranker.py
 │   └── config.py             # Central project configurations
 ├── requirements.txt          # Python dependencies
-├── walkthrough.md            # Interactive walkthrough & Q&A guide
+├── ui_demo_script.md         # Verified presentation script for Live Demo
 └── plan.md                   # Updated project plan
 ```
 

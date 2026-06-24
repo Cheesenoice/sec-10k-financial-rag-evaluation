@@ -2,175 +2,175 @@
   "Config_A": {
     "desc": "TF-IDF Baseline",
     "overall": {
-      "recall@5": 0.2875,
-      "mrr": 0.225,
-      "ndcg@5": 0.2258,
-      "latency_ms": 6.73
+      "recall@5": 0.3098,
+      "mrr": 0.2321,
+      "ndcg@5": 0.2279,
+      "latency_ms": 6.29
     },
     "by_category": {
       "factual": {
-        "recall@5": 0.275,
-        "mrr": 0.2625,
-        "ndcg@5": 0.2288,
-        "latency_ms": 7.92
+        "recall@5": 0.1959,
+        "mrr": 0.169,
+        "ndcg@5": 0.1504,
+        "latency_ms": 6.55
       },
       "comparison": {
-        "recall@5": 0.325,
-        "mrr": 0.2667,
-        "ndcg@5": 0.2794,
-        "latency_ms": 6.5
+        "recall@5": 0.3943,
+        "mrr": 0.2701,
+        "ndcg@5": 0.2857,
+        "latency_ms": 5.48
       },
       "lexical_gap": {
-        "recall@5": 0.3,
-        "mrr": 0.2333,
-        "ndcg@5": 0.2387,
-        "latency_ms": 6.23
+        "recall@5": 0.3052,
+        "mrr": 0.2807,
+        "ndcg@5": 0.2503,
+        "latency_ms": 7.14
       },
       "temporal_routing": {
-        "recall@5": 0.25,
-        "mrr": 0.1375,
-        "ndcg@5": 0.1562,
-        "latency_ms": 6.26
+        "recall@5": 0.3466,
+        "mrr": 0.2013,
+        "ndcg@5": 0.2214,
+        "latency_ms": 6.01
       }
     }
   },
   "Config_B": {
     "desc": "BM25 Baseline",
     "overall": {
-      "recall@5": 0.4562,
-      "mrr": 0.3602,
-      "ndcg@5": 0.3512,
-      "latency_ms": 24.7
+      "recall@5": 0.4017,
+      "mrr": 0.3055,
+      "ndcg@5": 0.3004,
+      "latency_ms": 21.87
     },
     "by_category": {
       "factual": {
-        "recall@5": 0.3,
-        "mrr": 0.3167,
-        "ndcg@5": 0.266,
-        "latency_ms": 28.16
+        "recall@5": 0.3365,
+        "mrr": 0.29,
+        "ndcg@5": 0.271,
+        "latency_ms": 23.07
       },
       "comparison": {
-        "recall@5": 0.75,
-        "mrr": 0.625,
-        "ndcg@5": 0.5955,
-        "latency_ms": 30.18
+        "recall@5": 0.4319,
+        "mrr": 0.3356,
+        "ndcg@5": 0.3392,
+        "latency_ms": 21.74
       },
       "lexical_gap": {
-        "recall@5": 0.5,
-        "mrr": 0.2492,
-        "ndcg@5": 0.2985,
-        "latency_ms": 20.44
+        "recall@5": 0.4069,
+        "mrr": 0.3076,
+        "ndcg@5": 0.2908,
+        "latency_ms": 21.54
       },
       "temporal_routing": {
-        "recall@5": 0.275,
-        "mrr": 0.25,
-        "ndcg@5": 0.2447,
-        "latency_ms": 20.03
+        "recall@5": 0.4365,
+        "mrr": 0.2831,
+        "ndcg@5": 0.2981,
+        "latency_ms": 20.96
       }
     }
   },
   "Config_C": {
     "desc": "Dense HNSW Search",
     "overall": {
-      "recall@5": 0.5,
-      "mrr": 0.4158,
-      "ndcg@5": 0.3996,
-      "latency_ms": 46.14
+      "recall@5": 0.4139,
+      "mrr": 0.3202,
+      "ndcg@5": 0.3136,
+      "latency_ms": 37.15
     },
     "by_category": {
       "factual": {
-        "recall@5": 0.45,
-        "mrr": 0.4167,
-        "ndcg@5": 0.3789,
-        "latency_ms": 55.93
+        "recall@5": 0.4756,
+        "mrr": 0.3808,
+        "ndcg@5": 0.3729,
+        "latency_ms": 46.2
       },
       "comparison": {
-        "recall@5": 0.75,
-        "mrr": 0.7142,
-        "ndcg@5": 0.6506,
-        "latency_ms": 33.25
+        "recall@5": 0.3801,
+        "mrr": 0.264,
+        "ndcg@5": 0.2655,
+        "latency_ms": 36.36
       },
       "lexical_gap": {
-        "recall@5": 0.4,
-        "mrr": 0.2742,
-        "ndcg@5": 0.2781,
-        "latency_ms": 36.25
+        "recall@5": 0.3647,
+        "mrr": 0.274,
+        "ndcg@5": 0.269,
+        "latency_ms": 32.54
       },
       "temporal_routing": {
-        "recall@5": 0.4,
-        "mrr": 0.2583,
-        "ndcg@5": 0.2906,
-        "latency_ms": 59.11
+        "recall@5": 0.4418,
+        "mrr": 0.3746,
+        "ndcg@5": 0.3575,
+        "latency_ms": 32.59
       }
     }
   },
   "Config_D": {
     "desc": "Hybrid (BM25 + Dense)",
     "overall": {
-      "recall@5": 0.575,
-      "mrr": 0.4227,
-      "ndcg@5": 0.4467,
-      "latency_ms": 76.29
+      "recall@5": 0.4826,
+      "mrr": 0.3845,
+      "ndcg@5": 0.3707,
+      "latency_ms": 68.42
     },
     "by_category": {
       "factual": {
-        "recall@5": 0.475,
-        "mrr": 0.3475,
-        "ndcg@5": 0.3545,
-        "latency_ms": 65.64
+        "recall@5": 0.4801,
+        "mrr": 0.4934,
+        "ndcg@5": 0.4282,
+        "latency_ms": 65.4
       },
       "comparison": {
-        "recall@5": 0.875,
-        "mrr": 0.7417,
-        "ndcg@5": 0.7532,
-        "latency_ms": 87.19
+        "recall@5": 0.4644,
+        "mrr": 0.35,
+        "ndcg@5": 0.3491,
+        "latency_ms": 78.21
       },
       "lexical_gap": {
-        "recall@5": 0.55,
-        "mrr": 0.3642,
-        "ndcg@5": 0.41,
-        "latency_ms": 85.53
+        "recall@5": 0.4773,
+        "mrr": 0.3539,
+        "ndcg@5": 0.3513,
+        "latency_ms": 65.06
       },
       "temporal_routing": {
-        "recall@5": 0.4,
-        "mrr": 0.2375,
-        "ndcg@5": 0.2689,
-        "latency_ms": 66.78
+        "recall@5": 0.5159,
+        "mrr": 0.332,
+        "ndcg@5": 0.3516,
+        "latency_ms": 63.53
       }
     }
   },
   "Config_E": {
     "desc": "Enhanced RAG Pipeline",
     "overall": {
-      "recall@5": 0.7719,
-      "mrr": 0.6056,
-      "ndcg@5": 0.6184,
-      "latency_ms": 2002.8
+      "recall@5": 0.8521,
+      "mrr": 0.7215,
+      "ndcg@5": 0.728,
+      "latency_ms": 314.61
     },
     "by_category": {
       "factual": {
-        "recall@5": 0.725,
-        "mrr": 0.5342,
-        "ndcg@5": 0.5523,
-        "latency_ms": 2044.24
+        "recall@5": 0.8842,
+        "mrr": 0.7395,
+        "ndcg@5": 0.7473,
+        "latency_ms": 320.58
       },
       "comparison": {
-        "recall@5": 0.8625,
-        "mrr": 0.7667,
-        "ndcg@5": 0.7264,
-        "latency_ms": 2015.96
+        "recall@5": 0.8161,
+        "mrr": 0.6955,
+        "ndcg@5": 0.6985,
+        "latency_ms": 312.88
       },
       "lexical_gap": {
-        "recall@5": 0.7,
-        "mrr": 0.4767,
-        "ndcg@5": 0.532,
-        "latency_ms": 1964.63
+        "recall@5": 0.8279,
+        "mrr": 0.7011,
+        "ndcg@5": 0.6973,
+        "latency_ms": 310.88
       },
       "temporal_routing": {
-        "recall@5": 0.8,
-        "mrr": 0.645,
-        "ndcg@5": 0.6628,
-        "latency_ms": 1986.38
+        "recall@5": 0.8889,
+        "mrr": 0.7579,
+        "ndcg@5": 0.78,
+        "latency_ms": 314.0
       }
     }
   }

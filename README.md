@@ -39,7 +39,7 @@ NLP-project/
 │   ├── baselines/            # Baseline search runs & HNSW graph plots
 │   └── 4_ablation_study_evaluation.ipynb # Presentation notebook
 ├── requirements.txt          # Project dependencies
-├── walkthrough.md            # Interactive walkthrough & Q&A guide
+├── ui_demo_script.md         # Verified presentation script for Live Demo
 └── plan.md                   # Updated project plan
 ```
 
