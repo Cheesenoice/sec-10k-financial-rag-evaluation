@@ -201,7 +201,7 @@ The architecture decouples the computational inference engine from user-facing r
 
 The data acquisition engine (`src/ingestion/downloader.py`) queries the SEC EDGAR system via user-agent header compliance, systematically gathering 18 complete annual Form 10-K filings across 6 major enterprise technology corporations over 3 fiscal years:
 
-$$	ext{Corporations} \in \{	ext{AAPL}, 	ext{MSFT}, 	ext{AMZN}, 	ext{NVDA}, 	ext{TSLA}, 	ext{GOOGL}\}, \quad 	ext{Fiscal Years} \in \{2022, 2023, 2024\}$$
+$$\text{Corporations} \in \{\text{AAPL}, \text{MSFT}, \text{AMZN}, \text{NVDA}, \text{TSLA}, \text{GOOGL}\}, \quad \text{Fiscal Years} \in \{2022, 2023, 2024\}$$
 
 Because SEC 10-K filings routinely exceed 100+ pages of dense legal boilerplates, `src/ingestion/parser.py` strips extraneous HTML tables-of-contents, styling scripts, and inline XBRL metadata tags, isolating three high-signal core financial sections:
 
@@ -252,9 +252,9 @@ flowchart LR
 
 To guarantee exact keyword matching for numeric codes, company abbreviations, and proper nouns, we implement an Okapi BM25 index (`src/indexing/bm25_index.py`). Given query $Q$ with terms $q_1, \dots, q_n$ and document chunk $D$:
 
-$$	ext{BM25}(D, Q) = \sum_{i=1}^{n} 	ext{IDF}(q_i) \cdot rac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot \left(1 - b + b \cdot rac{|D|}{	ext{avgdl}}ight)}$$
+$$\text{BM25}(D, Q) = \sum_{i=1}^{n} \text{IDF}(q_i) \cdot \frac{f(q_i, D) \cdot (k_1 + 1)}{f(q_i, D) + k_1 \cdot \left(1 - b + b \cdot \frac{|D|}{\text{avgdl}}\right)}$$
 
-$$	ext{IDF}(q_i) = \ln \left( rac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1 ight)$$
+$$\text{IDF}(q_i) = \ln \left( \frac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1 \right)$$
 
 - **Term Saturation Parameter ($k_1 = 1.5$):** Limits the score contribution of terms that appear repeatedly in verbose legal disclosures.
 - **Length Normalization Parameter ($b = 0.75$):** Penalizes disproportionately long paragraphs while preventing concise, digit-heavy balance sheets from being overlooked.
@@ -269,14 +269,14 @@ $$	ext{IDF}(q_i) = \ln \left( rac{N - n(q_i) + 0.5}{n(q_i) + 0.5} + 1 ight)$$
 
 For semantic concept retrieval, text chunks are embedded into a continuous dense space $\mathbb{R}^{384}$ using `BAAI/bge-small-en-v1.5` (`src/indexing/vector_index.py`). 
 
-- **L2 Vector Normalization:** All dense vectors are normalized to unit norm ($||ec{v}||_2 = 1$), converting the inner product operator into exact Cosine Similarity:
+- **L2 Vector Normalization:** All dense vectors are normalized to unit norm ($||\vec{v}||_2 = 1$), converting the inner product operator into exact Cosine Similarity:
 
-$$\cos(ec{u}, ec{v}) = rac{ec{u} \cdot ec{v}}{\|ec{u}\|_2 \|ec{v}\|_2} = ec{u}_{norm} \cdot ec{v}_{norm}^T$$
+$$\cos(\vec{u}, \vec{v}) = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\|_2 \|\vec{v}\|_2} = \vec{u}_{norm} \cdot \vec{v}_{norm}^T$$
 
 - **Hierarchical Navigable Small World (HNSW) Topology:** Built via FAISS using an `IndexHNSWFlat` index:
   - $M = 32$: Maximum bidirectional links per node across hierarchical graph layers.
-  - $	ext{efConstruction} = 200$: Exploration horizon during offline graph index construction.
-  - $	ext{efSearch} = 50$: Exploration horizon during online query graph traversal.
+  - $\text{efConstruction} = 200$: Exploration horizon during offline graph index construction.
+  - $\text{efSearch} = 50$: Exploration horizon during online query graph traversal.
   - Provides logarithmic search complexity $\mathcal{O}(\log N)$ while maintaining a >98% nearest-neighbor recall compared to brute-force exact search.
 
 <p align="center">
@@ -294,7 +294,7 @@ We deploy a **Pre-Retrieval Deterministic Router** (`src/retrieval/hybrid_retrie
 1. **Entity Extraction:** An NLP regex extractor scans query tokens for company names/aliases (`"Apple"`, `"AAPL"`, `"Tesla"`, `"TSLA"`) and fiscal years (`"2022"`, `"2023"`, `"2024"`).
 2. **Deterministic Pre-Filtering:** Slices the search space prior to distance computation. The search engine restricts both BM25 and FAISS index traversals exclusively to the subset of chunks satisfying the metadata constraints:
 
-$$\mathcal{D}_{	ext{search}} = \{ d \in \mathcal{D}_{	ext{corpus}} \mid d.	ext{ticker} = T_{	ext{query}} \land d.	ext{year} = Y_{	ext{query}} \}$$
+$$\mathcal{D}_{\text{search}} = \{ d \in \mathcal{D}_{\text{corpus}} \mid d.\text{ticker} = T_{\text{query}} \land d.\text{year} = Y_{\text{query}} \}$$
 
 This reduces the active corpus from **1,931 chunks to ~100 candidate chunks**, mathematically preventing any chunk from an irrelevant year or company from contaminating the retrieval pool.
 
@@ -316,7 +316,7 @@ FINANCIAL_SYNONYMS = {
 
 Directly summing raw BM25 scores (unbounded positive reals) and dense cosine similarities ($[-1, 1]$) produces arbitrary score distortion. We apply Cormack et al.'s **Reciprocal Rank Fusion (RRF)**:
 
-$$RRF\_Score(d \in \mathcal{D}) = \sum_{m \in \{	ext{BM25}, 	ext{HNSW}\}} rac{1}{k + r_m(d)}$$
+$$RRF\_Score(d \in \mathcal{D}) = \sum_{m \in \{\text{BM25}, \text{HNSW}\}} \frac{1}{k + r_m(d)}$$
 
 Where $r_m(d)$ represents the 1-based rank of document $d$ within retriever $m$, and $k = 60$ is the standard smoothing constant. RRF rewards passages that achieve strong consensus across both lexical and semantic modalities without requiring brittle heuristic score calibration.
 
@@ -324,7 +324,7 @@ Where $r_m(d)$ represents the 1-based rank of document $d$ within retriever $m$,
 
 Bi-encoders compute vector representations of queries and documents in isolation ($E(Q)$ and $E(D)$), preventing token-level interaction. To capture subtle relationships between metrics, numbers, and dates, we apply a Cross-Encoder reranker (`cross-encoder/ms-marco-MiniLM-L-6-v2`) over the Top-20 candidates surfaced by RRF:
 
-$$	ext{Score}_{	ext{CE}}(Q, D) = 	ext{MLP}\left( 	ext{Transformer}\Big( [	ext{CLS}] \circ Q \circ [	ext{SEP}] \circ D \circ [	ext{SEP}] \Big) ight)$$
+$$\text{Score}_{\text{CE}}(Q, D) = \text{MLP}\left( \text{Transformer}\Big( [\text{CLS}] \circ Q \circ [\text{SEP}] \circ D \circ [\text{SEP}] \Big) \right)$$
 
 Full sequence-to-sequence cross-attention evaluates every query token against every document token simultaneously, surfacing the top **5 optimal chunks** for prompt injection.
 
@@ -399,7 +399,7 @@ flowchart TD
 1. **Financial Density Score (FDS) Chunk Selection:**
    Passages from the corpus are pre-screened to ensure they contain extractable financial metrics:
 
-$$	ext{FDS} = rac{	ext{Count}(	ext{digits})}{	ext{Length}(D)} \ge 0.02, \quad 	ext{Length}(D) \ge 200 	ext{ characters}$$
+$$\text{FDS} = \frac{\text{Count}(\text{digits})}{\text{Length}(D)} \ge 0.02, \quad \text{Length}(D) \ge 200 \text{ characters}$$
 
 2. **Few-Shot Self-Instruct Generation:**
    Using `meta-llama/llama-3.1-8b-instant` via Groq Cloud, synthetic questions are generated across four target categories:
@@ -417,7 +417,7 @@ To avoid bias toward our production retriever, the candidate pool for ground-tru
 1. **Dense Semantic Retrieval (`Alibaba-NLP/gte-Qwen2-1.5B-instruct`):** Tops the MTEB leaderboard; retrieves the top-5 candidate chunks based on deep contextual representation.
 2. **Late-Interaction Retrieval (`ColBERTv2`):** Uses token-level **MaxSim** late interaction to capture exact numeric matching:
 
-$$	ext{MaxSim}(Q, D) = \sum_{q \in Q} \max_{d \in D} \left( E_q \cdot E_d^T ight)$$
+$$\text{MaxSim}(Q, D) = \sum_{q \in Q} \max_{d \in D} \left( E_q \cdot E_d^T \right)$$
 
 3. **Candidate Pooling:** Merging the top-5 from GTE-Qwen2 and the top-5 from ColBERTv2 forms a unified candidate pool of up to 10 unique chunks per query.
 4. **SOTA LLM-as-a-Judge Evaluation:**
@@ -503,15 +503,15 @@ Retrieval quality is evaluated at rank **$K = 5$** across three standard Informa
 
 1. **Recall@K:** Measures the fraction of relevant ground-truth chunks retrieved in the top $K$ positions:
 
-$$	ext{Recall}@K = rac{|R_K \cap G|}{|G|}$$
+$$\text{Recall}@K = \frac{|R_K \cap G|}{|G|}$$
 
 2. **Mean Reciprocal Rank (MRR@K):** Evaluates how close to the top position the first relevant chunk appears:
 
-$$	ext{MRR}@K = rac{1}{|Q|} \sum_{i=1}^{|Q|} rac{1}{	ext{rank}_i}$$
+$$\text{MRR}@K = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{rank}_i}$$
 
 3. **Normalized Discounted Cumulative Gain (NDCG@K):** Evaluates ranking quality using a logarithmic position discount:
 
-$$	ext{DCG}@K = \sum_{i=1}^{K} rac{2^{	ext{rel}_i} - 1}{\log_2(i + 1)}, \quad 	ext{NDCG}@K = rac{	ext{DCG}@K}{	ext{IDCG}@K}$$
+$$\text{DCG}@K = \sum_{i=1}^{K} \frac{2^{\text{rel}_i} - 1}{\log_2(i + 1)}, \quad \text{NDCG}@K = \frac{\text{DCG}@K}{\text{IDCG}@K}$$
 
 ### System Configurations (Config A to E)
 
@@ -626,7 +626,7 @@ The `notebooks_en/` directory provides interactive Jupyter notebooks covering ma
 ### 2. `notebooks_en/baselines/`
 - `1_lexical/1a_demo_tfidf.ipynb`: Complete manual Vector Space Model (VSM) calculations: builds vocabulary, prints full **TF Matrix**, **IDF Vector**, and **TF-IDF Weight Matrix**, and manually calculates Cosine Similarity.
 - `1_lexical/1b_demo_bm25.ipynb`: Step-by-step Okapi BM25 implementation: term saturation curve ($k_1$) and document length normalization ($b$).
-- `2_vector/2a_demo_vector.ipynb`: Semantic vector embeddings using `bge-small-en-v1.5`: calculates a $5 	imes 5$ document similarity matrix and renders a **2D HNSW Graph Topology** via PCA reduction and NetworkX.
+- `2_vector/2a_demo_vector.ipynb`: Semantic vector embeddings using `bge-small-en-v1.5`: calculates a $5 \times 5$ document similarity matrix and renders a **2D HNSW Graph Topology** via PCA reduction and NetworkX.
 - `3_enhanced/3a_demo_enhanced.ipynb`: Step-by-step trace of the full production pipeline: NLP year routing, query expansion, manual RRF fraction calculations, and Cross-Encoder logit scoring.
 
 ### 3. `notebooks_en/eda/` & `notebooks_en/eval/`
