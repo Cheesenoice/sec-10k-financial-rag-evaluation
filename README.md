@@ -14,6 +14,20 @@
 
 ---
 
+<div align="center">
+
+### 📚 Official Deliverables & Academic Documentation
+
+| 📑 Full Technical Report (`NLP-REPORT.pdf`) | 🖥️ Presentation Slide Deck (`NLP-SLIDE.pptx`) |
+| :---: | :---: |
+| <a href="https://drive.google.com/file/d/16L4eLZpe_-9cVJ0hgPuI2xE77zhCROAI/view?usp=sharing"><img src="https://img.shields.io/badge/PDF%20Report-Read%20Online%20%2F%20Download-E02424?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF Report" /></a> | <a href="https://docs.google.com/presentation/d/1eB_dtbaA0mlm44hu8JeBcKnDLGv2Kf2a/edit?usp=sharing&ouid=113015507222254663973&rtpof=true&sd=true"><img src="https://img.shields.io/badge/Slide%20Deck-Open%20Google%20Slides-E37400?style=for-the-badge&logo=google-slides&logoColor=white" alt="Slide Deck" /></a> |
+| **Comprehensive 300-Query Benchmark Report**<br><sub>• Formal mathematical derivations (BM25, FAISS HNSW, RRF, ColBERTv2 MaxSim)<br>• Full 5-Config Ablation Study, Category Breakdown & Latency Analysis<br>• SEC Ingestion, Boundary Chunking & Ground Truth Provenance Audit</sub> | **Official Project Defense & Presentation Slides**<br><sub>• 28 High-Resolution Interactive Presentation Slides (16:9 Widescreen)<br>• End-to-End Architectural Diagrams, Pareto Frontiers & Heatmaps<br>• Live Demo Scenarios & Committee Defense QA Preparations</sub> |
+| [👉 **Read / Download PDF Report**](https://drive.google.com/file/d/16L4eLZpe_-9cVJ0hgPuI2xE77zhCROAI/view?usp=sharing) | [👉 **Open Presentation Slide Deck**](https://docs.google.com/presentation/d/1eB_dtbaA0mlm44hu8JeBcKnDLGv2Kf2a/edit?usp=sharing&ouid=113015507222254663973&rtpof=true&sd=true) |
+
+</div>
+
+---
+
 ## 📑 Table of Contents
 
 - [1. Executive Summary & Scientific Motivation](#1-executive-summary--scientific-motivation)

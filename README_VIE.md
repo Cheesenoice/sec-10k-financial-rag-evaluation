@@ -9,6 +9,20 @@ Dự án được xây dựng với mục tiêu kép:
 
 ---
 
+<div align="center">
+
+### 📚 Tài Liệu Báo Cáo Chính Thức & Slide Thuyết Trình
+
+| 📑 Báo Cáo Học Thuật Đầy Đủ (`NLP-REPORT.pdf`) | 🖥️ Slide Thuyết Trình Bảo Vệ (`NLP-SLIDE.pptx`) |
+| :---: | :---: |
+| <a href="https://drive.google.com/file/d/16L4eLZpe_-9cVJ0hgPuI2xE77zhCROAI/view?usp=sharing"><img src="https://img.shields.io/badge/PDF%20Report-Đọc%20Online%20%2F%20Tải%20Về-E02424?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="PDF Report" /></a> | <a href="https://docs.google.com/presentation/d/1eB_dtbaA0mlm44hu8JeBcKnDLGv2Kf2a/edit?usp=sharing&ouid=113015507222254663973&rtpof=true&sd=true"><img src="https://img.shields.io/badge/Slide%20Deck-Mở%20Google%20Slides-E37400?style=for-the-badge&logo=google-slides&logoColor=white" alt="Slide Deck" /></a> |
+| **Báo Cáo Benchmark 300 Câu Toàn Diện**<br><sub>• Đầy đủ chứng minh toán học (BM25, FAISS HNSW, RRF, ColBERTv2 MaxSim)<br>• Kết quả Ablation Study 5 cấu hình & Phân rã 4 nhóm câu hỏi<br>• Quy trình Ingestion SEC, Sliding Window & Kiểm toán nguồn gốc</sub> | **Slide Thuyết Trình Bảo Vệ Đồ Án (16:9)**<br><sub>• 28 Slide thuyết trình độ phân giải cao chuẩn học thuật<br>• Sơ đồ luồng dữ liệu kiến trúc, Pareto Frontiers & Heatmaps<br>• Kịch bản Live Demo và bộ câu hỏi vấn đáp phản biện</sub> |
+| [👉 **Xem / Tải về Báo Cáo PDF**](https://drive.google.com/file/d/16L4eLZpe_-9cVJ0hgPuI2xE77zhCROAI/view?usp=sharing) | [👉 **Mở Slide Thuyết Trình PPTX**](https://docs.google.com/presentation/d/1eB_dtbaA0mlm44hu8JeBcKnDLGv2Kf2a/edit?usp=sharing&ouid=113015507222254663973&rtpof=true&sd=true) |
+
+</div>
+
+---
+
 ## 📁 Cấu Trúc Thư Mục Dự Án
 
 ```text
